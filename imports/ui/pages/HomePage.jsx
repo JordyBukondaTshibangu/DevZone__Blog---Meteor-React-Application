@@ -1,9 +1,9 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
-import { PostsCollection } from '../../api/collections/postCollections';
 import PostCard from '../components/PostCard';
 import ListUsers from '../components/ListUsers';
 import UserAccount from '../components/UserAccount';
+import {PostsCollection} from "../../db/posts/collection";
 
 
 const HomePage = props => {

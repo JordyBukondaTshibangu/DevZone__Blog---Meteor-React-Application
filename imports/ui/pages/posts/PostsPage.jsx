@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
-import { PostsCollection } from '../../../api/collections/postCollections';
+import {PostsCollection} from "../../../db/posts/collection";
 
 const PostsPage = props => {
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
 import { useHistory } from 'react-router-dom';
-import { PostsCollection } from '../../../api/collections/postCollections';
 import SinglePost from '../../components/SinglePost';
+import {PostsCollection} from "../../../db/posts/collection";
 
 let email = "jordytshibss@test.com"
 
