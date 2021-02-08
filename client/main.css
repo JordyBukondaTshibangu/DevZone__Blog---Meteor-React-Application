@@ -225,7 +225,6 @@ footer .menu-list ul li .list-item-group {
   text-align: center;
   color: #000;
   padding-top: 10px;
-  
 }
 
 .devs-side-bar .developer-card {
@@ -579,8 +578,6 @@ footer .menu-list ul li .list-item-group {
   background: #fff;
   margin-bottom: 30px;
 }
-
-
 .info {
   margin: 10px 100px 10px 40px;
 }
@@ -781,34 +778,23 @@ footer .menu-list ul li .list-item-group {
   .main {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: #eee;
-    padding-bottom: 2px;
   }
   .user-side-bar {
     height: 200px;
-    justify-content: center;
     background-color: #000;
-    text-align: center;
-    padding-top: 20px;
     color: #fff;
-    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
   }
   .user-side-bar img {
-    border-radius: 100px;
     width: 100px;
     height: 100px;
     border: 1px solid #fff;
   }
   .devs-side-bar {
-    margin : 20px 10px 50px 10px;
-    justify-content: center;
-    align-items: center;
     background-color: #000;
     text-align: center;
     color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
-    
   }
   .devs-side-bar-content {
     display: flex;
@@ -816,20 +802,11 @@ footer .menu-list ul li .list-item-group {
   .devs-side-bar .developer-card {
     margin: 5px;
     height: 150px;
-    border-radius: 10%;
     padding-top: 10px;
     color: #000;
     background: #fff;
   }
-  .devs-side-bar .developer-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 100%;
-  }
   .new-post-container {
-    background: #eee;
-    display: grid;
-    grid-template-columns: 1fr;
     height: 80vh;
   }
   .new-post-container h3 {
@@ -842,65 +819,34 @@ footer .menu-list ul li .list-item-group {
     margin: -180px auto 100px;
     width: 75%;
     height: 100%;
-    background-color: #fff;
     padding: 5px;
-    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
   }
   .dev-page-container {
-    display: grid;
     grid-template-columns: 1fr;
     background-color: #fff;
   }
   .dev-page-container .dev-card {
     margin: 30px auto;
     width: 60%;
-    background-color: #fff;
-    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
   }
   .posts-page-container {
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: #fff;
-    text-align: center;
     padding-top: 50px;
     height: 120%;
     
   }
   .posts-page-container .post-card {
     width: 75%;
-    background-color: #fff;
     margin-bottom: 50px;
-    padding-top: 50px;
     height: 100%;
     margin-top: 20px;
     border-bottom: 2px solid #000;
     
   }
-  .post-card-head h1{
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 500;
-    margin: 25px 100px 5px 100px;
-  }
-  .post-card-head span {
-    font-weight: 100;
-    font-size : 10px;
-  }
   .post-card-head p {
-    margin: 25px 10px 15px 10px;
     font-size : 30px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   .post-card-img {
     height: 400px;
-    padding: 10px;
-  }
-  .post-card-img img {
-    width: 100%;
-    height: 300px;
-    cursor: pointer;
-    transition: 0.6s;
   }
   .about-page-container {
     height: 100vh;
@@ -941,38 +887,41 @@ footer .menu-list ul li .list-item-group {
   .profile-container {
     margin: 20px 10px;
   }
-  .profile-container .user-details {
-    display: flex;
-    height: 80vh;
-    background: #eee;
-    border: 1px solid black;
-    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  }
-  .profile-container .user {
-    background-color: #fff;
-    width: 100%;
-    padding: 20px 20px 20px;
-    text-align: center;
-    border: 1px solid #000;
-  }
-
-  .info {
-    margin: 10px 100px 10px 40px;
-  }
   .info span {
     margin: 20px 50px 5px 30px;
     font-size: 22px;
   }
   .info input {
-    width: 50%;
-    border: none;
-    border-bottom: 1px solid #000;
-    outline: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px;
     font-size: 22px;
   }
   .info p {
     font-size: 22px;
   }
 }
+
+@media only screen 
+  and (min-device-width: 481px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .main {
+      grid-template-columns: 1fr 2fr;
+    }
+    .devs-side-bar {
+      position: absolute;
+      text-align: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-top: 450px;
+      width: 300px;
+    }
+    .dev-page-container {
+      grid-template-columns: 1fr 1fr;
+    }
+    .dev-page-container .dev-card {
+      margin: 30px auto;
+      width: 80%;
+    }
+    .profile-container {
+      margin: 20px 10px;
+    }}
