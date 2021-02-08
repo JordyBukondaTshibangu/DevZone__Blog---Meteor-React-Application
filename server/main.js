@@ -53,8 +53,15 @@ function insertPost({title, tagline, description, image, author, email, content}
 
 Meteor.startup(() => {
 
-  if(DevelopersCollection.find().count() < 2){
-
+  if(DevelopersCollection.find().count() === 0){
+    insertDev({
+      fullName : 'Jordy Tshibss',
+      dateOfBirth : '1 August 1997',
+      avatar : 'http://dailynous.com/wp-content/uploads/2017/05/descartes-square.jpg',
+      email : 'jordytshibss@test.com',
+      myBio : 'In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual',
+      password : '123456'
+    })
     insertDev({
       fullName : 'Emma Tshibss',
       dateOfBirth : '23 October 1995',
