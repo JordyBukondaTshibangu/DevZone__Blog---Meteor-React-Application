@@ -336,7 +336,8 @@ footer .menu-list ul li .list-item-group {
     background-color: #eee;
 }
 .dev-page-container .dev-card {
-  width: 100%;
+  width: 80%;
+  margin-bottom: 30px;
   height: 420px;
   background-color: #fff;
   box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
@@ -345,7 +346,7 @@ footer .menu-list ul li .list-item-group {
 }
 .dev-page-container .dev-card:hover{
   margin: 10px 20px;
-  width: 120%;
+  width: 90%;
   height: 450px;
   background-color: #eee;
   box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
