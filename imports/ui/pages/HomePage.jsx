@@ -9,7 +9,7 @@ import UserAccount from '../components/UserAccount';
 const HomePage = props => {
     return (
         <div className="main">
-            <UserAccount />
+            <UserAccount dev={props.dev}/>
             <div className="posts-list">
                 
                 {

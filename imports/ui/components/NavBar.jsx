@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import { Link , useHistory } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild, FaUser, FaCog } from 'react-icons/fa';
 
-const NavBar = () => {
+const NavBar = props => {
 
     let history = useHistory();
 
-    const dev = JSON.parse(localStorage.getItem('dev'));
+    const dev = props.dev 
     const [ showModal, setShowModal ] = useState(false)
 
     const handleLogout = () => {

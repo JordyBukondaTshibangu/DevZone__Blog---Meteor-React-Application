@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router';
-import { FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 
-const UpdateProfile = () => {
+const UpdateProfile = props => {
 
-    const dev = JSON.parse(localStorage.getItem('dev'));
+    const dev = props.dev;
     const { _id, fullName, dateOfBirth, email, myBio, avatar} = dev
 
     let history = useHistory();

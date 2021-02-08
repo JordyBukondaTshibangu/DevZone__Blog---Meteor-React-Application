@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 import { Redirect, useHistory } from 'react-router';
 
-const dev = JSON.parse(localStorage.getItem('dev'));
 
-const UserAccount = () => {
+
+const UserAccount = props => {
+
+    const dev = props.dev
 
     if(!dev){
         useHistory().push('/sign-in');
@@ -17,8 +19,9 @@ const UserAccount = () => {
         joinOn = createdAt.toString();
     }
             return (
-                <>
+                <> 
                 {
+
                     dev ? (<div className="user-side-bar">
                     <div>
                             <img src={avatar} alt="" />

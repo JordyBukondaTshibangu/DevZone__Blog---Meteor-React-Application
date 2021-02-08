@@ -2,18 +2,12 @@ import React, { useState } from 'react';
 import { Link, useHistory  } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 
-const dev = JSON.parse(localStorage.getItem('dev'));
-
-let email;
-if(dev === null){
-    email = ""
-} else {
-    email = dev.email;
-}
+let email = "jordytshibss@test.com";
 
 
-const MyProfile = () => {
+const MyProfile = props => {
 
+    const dev = props.dev;
     let history = useHistory();
 
     if(!dev){

@@ -4,17 +4,13 @@ import { useHistory } from 'react-router-dom';
 import { PostsCollection } from '../../../api/collections/postCollections';
 import SinglePost from '../../components/SinglePost';
 
-const dev = JSON.parse(localStorage.getItem('dev'));
-let email;
-if(dev === null){
-    email = ""
-} else {
-    email = dev.email;
-}
+let email = "jordytshibss@test.com"
 
 
 const PostsPage = props => {
 
+    const dev = props.dev
+    
     if(!dev){
         useHistory().push('/sign-in');
     } 

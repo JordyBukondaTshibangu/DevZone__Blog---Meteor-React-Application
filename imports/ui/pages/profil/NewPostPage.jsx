@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom'
 
-const NewPostPage = () => {
+const NewPostPage = props => {
 
     let history = useHistory()
     const [title, setTitle ] = useState("");
@@ -15,8 +15,8 @@ const NewPostPage = () => {
 
         evt.preventDefault();
 
-        const email = JSON.parse(localStorage.getItem('dev')).email;
-        const author = JSON.parse(localStorage.getItem('dev')).fullName;
+        const email = props.dev.email;
+        const author = props.dev.fullName;
 
         const post = { title, tagline, description, image, author, email, content };
 
