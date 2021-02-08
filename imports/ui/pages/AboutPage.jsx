@@ -19,7 +19,7 @@ const AboutPage = () => {
                     <img src={image} alt="" />
                     Jordy Tshibangu
                     <div className="dev-zone-text"> 
-                        <p>Our company is led by Jordy Tshibangu (CEO) and was created on the 4th of february 2021.</p>
+                        <p>Our company is led by Jordy Tshibangu (CEO) and was created on the 6th of february 2021.</p>
                     </div>
                 </div>
         </div>
