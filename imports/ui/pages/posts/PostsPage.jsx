@@ -1,54 +1,15 @@
-import React, { useState } from 'react';
-import { withTracker } from 'meteor/react-meteor-data'
+import React from 'react';
+import { withTracker } from 'meteor/react-meteor-data';
 import {PostsCollection} from "../../../db/posts/collection";
+import DevPost from '../../components/DevPost';
+;
 
 const PostsPage = props => {
-
-    const [ showDescription, setShowDescription ] = useState(false);
-
+    
     return (
         <div className="posts-page-container">
             {     
-                props.posts.map((post,index) => {
-
-                    const {title, description, content, image, author, createdAt} = post
-
-                    const date = (createdAt) => {
-                        let month = createdAt.getMonth() + 1;
-                        let day = createdAt.getDate();
-                        let year = createdAt.getFullYear();
-                
-                        return `${day}/${month}/${year}`
-                    }
-
-                    return (
-                        <div key={index} className="post-card">
-                              <div className="post-card-head">
-                            <h3>{author}</h3>
-                            <span> published : {date(createdAt)}</span> 
-                            <h1>{title}</h1>
-                            <button onClick={() => setShowDescription(!showDescription)} className="btn-description"> 
-                                { showDescription ?  'Hide Description ' : 'show description'}
-                            </button>
-                            {
-                                !showDescription ? null : (
-                                    <div className="post-description">
-                                        <p>Description</p>
-                                        <p>{description}</p>
-                                    </div>
-                                )
-                            }
-                                <p>Content</p>
-                                <p>{content}</p>
-                        </div>
-                        <div className="post-card-img">
-                            <img src={image} alt="/" />
-                        </div>
-                        <div className="post-card-footer">
-                            like sections
-                        </div>
-                        </div>)
-                })
+                props.posts.map((post,index) => <DevPost key={index} post={post} dev={props.dev}/>)
             }
         </div>
     )

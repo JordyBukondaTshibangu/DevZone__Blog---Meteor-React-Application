@@ -32,7 +32,7 @@ const NewPostPage = props => {
         <div className="new-post-container">
             { error }
             <h3>Add New Post </h3>
-           <form onSubmit={submitPost}>
+            <form onSubmit={submitPost}>
                <div className="new-post-section">
                     <div className="input-group">
                         <span>Title </span>

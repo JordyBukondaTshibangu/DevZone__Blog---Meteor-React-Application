@@ -1,12 +1,12 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import { DevelopersCollection } from '../../api/collections/developersCollection';
+import { DevelopersCollection } from '../../db/developers/collection';
 
 
 const ListUsers = props => {
 
     return (
-        <div>
+        <div className="devs-side-bar-content">
             {
                 props.developers.map((developer, index) => {
                     const { fullName, avatar, email} = developer

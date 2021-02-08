@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router';
+import {  useHistory } from 'react-router';
 
 const UpdateProfile = props => {
 

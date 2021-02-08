@@ -1,6 +1,6 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
-import { DevelopersCollection  } from '../../../api/collections/developersCollection';
+import { DevelopersCollection  } from '../../../db/developers/collection';
 
 const DevelopersPage = props => {
 

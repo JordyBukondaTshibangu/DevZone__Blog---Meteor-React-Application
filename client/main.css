@@ -421,7 +421,6 @@ footer .menu-list ul li .list-item-group {
   height: 300px;
   cursor: pointer;
   transition: 0.6s;
-  
 }
 .post-description {
   margin: 10px 5px;
@@ -664,4 +663,317 @@ footer .menu-list ul li .list-item-group {
   font-size: 24px;
   font-weight: 500;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.post-card-footer {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  padding-top: 10px;
+}
+.post-card-footer  div{
+  border: 1px solid #000;
+  height: 30px;
+  margin: auto;
+  padding-top: 8px;
+  border-radius: 20px;
+}
+.post-card-footer  .comments{
+  width: 200px;
+}
+.post-card-footer  .comments:hover{
+  width: 230px;
+  height: 40px;
+  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+}
+.post-card-footer  .likes{
+  width: 100px;
+}
+.post-card-footer  .likes:hover{
+  width: 130px;
+  height: 40px;
+  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  background: rgb(255, 105, 105);
+}
+.post-card-footer  span {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.post-card .comment-section {
+  text-align: start;
+}
+.post-card .comment-section li {
+  list-style: none;
+}
+.comment-content {
+  margin: 10px 5px 5px 5px;
+  border: 1px solid #000;
+  padding-left: 20px;
+  padding-top: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 9px 0 rgb(0, 0, 0,.7);
+}
+.comment-content span {
+  font-size: 12px;
+  margin-right: 10px;
+}
+.comment-content p {
+  margin : 10px 10px 10px 0px ;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.comment-section {
+  border-top: 5px solid #eee;
+  padding: 10px;
+}
+.comment-section .input-comment {
+  display: flex;
+  padding: 5px 10px 5px 40px;
+  margin-bottom: 30px;
+}
+.comment-section input {
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+}
+.comment-section button {
+  width: 30%;
+  color: #fff;
+  font-weight: 800;
+  border: 1px solid #000;
+  cursor: pointer;
+  background: #000;
+  border-radius: 25px;
+  margin-left: 10px;
+}
+.view-all-posts {
+  margin: 15px 180px;
+  display: flex;
+  text-align: center;
+  padding: 10px;
+}
+.view-all-posts h4 {
+  margin-right: 10px;
+}
+.view-all-posts:hover {
+  width: 200px;
+  height: 15px;
+  background: #eee;
+  display: flex;
+  text-align: center;
+  box-shadow: 5px 5px 9px 0 rgb(0, 0, 0,.7);
+  border-radius: 20px;
+}
+
+@media only screen 
+  and (min-device-width: 120px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #eee;
+    padding-bottom: 2px;
+  }
+  .user-side-bar {
+    height: 200px;
+    justify-content: center;
+    background-color: #000;
+    text-align: center;
+    padding-top: 20px;
+    color: #fff;
+    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  }
+  .user-side-bar img {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+  }
+  .devs-side-bar {
+    margin : 20px 10px 50px 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+  }
+  .devs-side-bar-content {
+    display: flex;
+  }
+  .devs-side-bar .developer-card {
+    margin: 5px;
+    height: 150px;
+    border-radius: 10%;
+    padding-top: 10px;
+    color: #000;
+    background: #fff;
+  }
+  .devs-side-bar .developer-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+  }
+  .new-post-container {
+    background: #eee;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 80vh;
+  }
+  .new-post-container h3 {
+    margin: 40px auto 0;
+    font-size: 32px;
+    font-weight: 800;
+    height: 40px;
+  }
+  .new-post-section {
+    margin: -180px auto 100px;
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  }
+  .dev-page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+  }
+  .dev-page-container .dev-card {
+    margin: 30px auto;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  }
+  .posts-page-container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 50px;
+    height: 120%;
+    
+  }
+  .posts-page-container .post-card {
+    width: 75%;
+    background-color: #fff;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    height: 100%;
+    margin-top: 20px;
+    border-bottom: 2px solid #000;
+    
+  }
+  .post-card-head h1{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin: 25px 100px 5px 100px;
+  }
+  .post-card-head span {
+    font-weight: 100;
+    font-size : 10px;
+  }
+  .post-card-head p {
+    margin: 25px 10px 15px 10px;
+    font-size : 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .post-card-img {
+    height: 400px;
+    padding: 10px;
+  }
+  .post-card-img img {
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  .about-page-container {
+    height: 100vh;
+  }
+  .dev-zone-about {
+    padding-top: 15px;
+    height: 50%;
+  }
+  .dev-zone-about p { 
+    margin : 85px 100px 0px 100px;
+    font-size: 30px;
+  }
+  .dev-zone-card {
+    width: 500px;
+    height: 490px;
+    font-size: 18px;
+    color: #fff;
+  }
+  .about-page-container h3 {
+    margin: 20px auto;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .dev-zone-card img{
+    margin: 30px 30px 10px 65px;
+    width: 300px;
+    height: 300px;
+  }
+  .dev-zone-text {
+    width: 650px;
+    color: #000;
+    margin-left: -50px ;
+    margin-top: 180px;
+    padding: 5px;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .profile-container {
+    margin: 20px 10px;
+  }
+  .profile-container .user-details {
+    display: flex;
+    height: 80vh;
+    background: #eee;
+    border: 1px solid black;
+    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  }
+  .profile-container .user {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 20px 20px;
+    text-align: center;
+    border: 1px solid #000;
+  }
+
+.info {
+  margin: 10px 100px 10px 40px;
+}
+.info span {
+  margin: 20px 50px 5px 30px;
+  font-size: 22px;
+}
+.info input {
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+  font-size: 22px;
+}
+.info p {
+  font-size: 22px;
+}
+
 }

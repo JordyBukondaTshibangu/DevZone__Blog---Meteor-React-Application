@@ -1,5 +1,4 @@
-import { Mongo } from 'meteor/mongo';
-
+import { DevelopersCollection } from "/imports/db/developers/collection";
 
 Meteor.methods({
     'developer.create'({fullName, dateOfBirth, email, password}){
@@ -42,6 +41,3 @@ Meteor.methods({
         return DevelopersCollection.remove({email});
     }
 })
-
-
-export const DevelopersCollection = new Mongo.Collection('developers');

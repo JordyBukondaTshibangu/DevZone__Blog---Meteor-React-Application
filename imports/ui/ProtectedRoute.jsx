@@ -16,8 +16,6 @@ const ProtectedRoute = props => {
         password : '123456'
       }
 
-      console.log(dev);
-
     const Component = props.component;
     const isAuthenticated = "jordytshibss@test.com";
 

@@ -57,7 +57,6 @@ const SinglePost = props => {
                     <img src={image} alt="/" />
                 </div>
                 <div className="post-card-footer">
-                    like sections
                 </div>
                 <div className="btn-section">
                     <button>
