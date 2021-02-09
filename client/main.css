@@ -683,6 +683,7 @@ footer .menu-list ul li .list-item-group {
   width: 230px;
   height: 40px;
   box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  cursor: pointer;
 }
 .post-card-footer  .likes{
   width: 100px;
@@ -690,6 +691,7 @@ footer .menu-list ul li .list-item-group {
 .post-card-footer  .likes:hover{
   width: 130px;
   height: 40px;
+  cursor: pointer;
   box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
   background: rgb(255, 105, 105);
 }
@@ -898,6 +900,34 @@ footer .menu-list ul li .list-item-group {
   .info p {
     font-size: 22px;
   }
+  .login-container {
+    background: #eee;
+    height: 100vh;
+    padding-left: 200px;
+    padding-top: 30%;
+  }
+  .login-box {
+    background: #fff;
+    width: 600px;
+    height: 900px;
+    padding-left: 30px;
+    padding-top: 200px;
+    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  }
+  .login-box  span {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .login-box  input {
+    font-size: 28px;
+  }
+  .login-box .go-to-sign-up {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-left: 130px;
+    margin: 10px 5px 20px;
+  }
 }
 
 @media only screen 
@@ -925,5 +955,17 @@ footer .menu-list ul li .list-item-group {
     }
     .profile-container {
       margin: 20px 10px;
+    }
+    .login-container {
+      background: #eee;
+      height: 100vh;
+      padding-left: 280px;
+    }
+    .login-box {
+      background: #fff;
+      width: 400px;
+      height: 500px;
+      padding-left: 30px;
+      padding-top: 200px;
     }
   }
