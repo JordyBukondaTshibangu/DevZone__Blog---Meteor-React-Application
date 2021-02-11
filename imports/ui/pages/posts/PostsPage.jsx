@@ -2,14 +2,16 @@ import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import {PostsCollection} from "../../../db/posts/collection";
 import DevPost from '../../components/DevPost';
+import LoadingSpinner from '../../components/LoadingSpinner'
 ;
 
-const PostsPage = props => {
+const PostsPage = ({dev, posts}) => {
     
     return (
         <div className="posts-page-container">
             {     
-                props.posts.map((post,index) => <DevPost key={index} post={post} dev={props.dev}/>)
+                posts.length === 0 ? <LoadingSpinner /> : 
+                posts.map((post,index) => <DevPost key={index} post={post} dev={dev}/>)
             }
         </div>
     )

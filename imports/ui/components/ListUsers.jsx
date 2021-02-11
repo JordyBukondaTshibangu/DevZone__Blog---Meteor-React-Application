@@ -1,14 +1,16 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { DevelopersCollection } from '../../db/developers/collection';
+import LoadingSpinner from './LoadingSpinner';
 
 
-const ListUsers = props => {
+const ListUsers = ({developers}) => {
 
     return (
         <div className="devs-side-bar-content">
             {
-                props.developers.map((developer, index) => {
+                developers.length === 0 ? <LoadingSpinner /> : 
+                developers.map((developer, index) => {
                     const { fullName, avatar, email} = developer
                     return (
                         <div key={index} className="developer-card">
