@@ -3,7 +3,7 @@ import React from 'react';
 const Error = props => {
     return (
         <div className="overlay"> 
-        <div className="card ">
+        <div className="card-feedback ">
              <div className='upper-side-failure'>
              <h3 className='status'> Failure</h3>
          </div>

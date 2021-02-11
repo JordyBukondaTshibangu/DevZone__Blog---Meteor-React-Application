@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { Link , useHistory } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild, FaUser, FaCog } from 'react-icons/fa';
 
@@ -38,17 +39,20 @@ const NavBar = props => {
                 <img src={dev.avatar} alt="avatar" onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}}/>
                 {
                     !showModal ? null : 
-                    (<div className="user-account">
-                    <ul className="user-account-modal">
-                        <li><Link to="/my-profile" className="list-item-group"><FaUser/><span>My Profil</span></Link></li>
-                        <li><Link to="/update-my-profile" className="list-item-group"><FaCog/><span>Update Profil</span></Link></li>
-                        <li><Link to="/my-posts" className="list-item-group"><FaBook/><span>My posts</span></Link></li>
-                        <li><Link to="/new-post" className="list-item-group"><FaPlusSquare/><span>Add new post</span></Link></li>
-                        <li>
-                            <button onClick={handleLogout}> Log out </button>
-                        </li>
-                    </ul>
-                </div>) 
+                    ReactDOM.createPortal(
+                        <div className="overlay" onClick={() => setShowModal(false)}>
+                            <div className="side-bar-menu">
+                                <ul className="user-account-modal">
+                                    <li><Link to="/my-profile" className="list-item-group"><FaUser/><span>My Profil</span></Link></li>
+                                    <li><Link to="/update-my-profile" className="list-item-group"><FaCog/><span>Update Profil</span></Link></li>
+                                    <li><Link to="/my-posts" className="list-item-group"><FaBook/><span>My posts</span></Link></li>
+                                    <li><Link to="/new-post" className="list-item-group"><FaPlusSquare/><span>Add new post</span></Link></li>
+                                    <li>
+                                        <button onClick={handleLogout}> Log out </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>, document.getElementById('react-portal-account'))
                 }
             </div> 
         </nav>

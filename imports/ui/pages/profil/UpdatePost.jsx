@@ -39,11 +39,9 @@ const UpdatePost = props => {
         })
         
     }
-
-
     return (
         <div className="new-post-container">
-            { !error && ReactDOM.createPortal( <Error>Oupsss...Something happened!</Error>, document.getElementById('react-feedback')) }
+            { error && ReactDOM.createPortal( <Error>Oupsss...Something happened!</Error>, document.getElementById('react-feedback')) }
             <h3>Edit Post </h3>
             { success && ReactDOM.createPortal( <Success>Your Post was successfully updated!</Success>, document.getElementById('react-feedback')) }
             <form onSubmit={editPost}>
