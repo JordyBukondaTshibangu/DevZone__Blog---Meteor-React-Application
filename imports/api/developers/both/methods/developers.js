@@ -1,4 +1,6 @@
 import { DevelopersCollection } from "/imports/db/developers/collection";
+import { Email } from 'meteor/email';
+
 
 Meteor.methods({
     'developer.create'({fullName, dateOfBirth, email, password}){
@@ -6,10 +8,16 @@ Meteor.methods({
         const myBio = "";
 
         if(!fullName || !dateOfBirth || !email || !password)  return ;
+
+        const dev = DevelopersCollection.findOne({email});
+
+        if(!dev) {
+            return DevelopersCollection.insert({
+                fullName, dateOfBirth, email, password, avatar, myBio, createdAt : new Date()
+            });
+        };
         
-        return DevelopersCollection.insert({
-            fullName, dateOfBirth, email, password, avatar, myBio, createdAt : new Date()
-        });
+        
 
     },
     'dev.login'({ email, password}){
@@ -39,5 +47,16 @@ Meteor.methods({
     },
     'developer.remove'(email){
         return DevelopersCollection.remove({email});
+    }, 
+    'sendEmail'(to){
+        check([to], [String]);
+        this.unblock();
+
+        Email.send({
+            to: to,
+            from: "jordytshibss@gmail.com",
+            subject: "Welcome to DevZone",
+            text: "Welcome to devZone, Where you belong and you share your thougths freely and smartly"
+        });
     }
 })

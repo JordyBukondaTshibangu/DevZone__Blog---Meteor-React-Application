@@ -29,8 +29,18 @@ const SignUp = () => {
 
                 return;
             }
-            localStorage.setItem('dev', JSON.stringify(dev))
-            history.push('/');
+            Meteor.call('sendEmail', email, error => {
+                localStorage.setItem('dev', JSON.stringify(newDev))
+                history.push('/');
+
+                if(error) {
+                    setMessage("There was an error from the server");
+                    console.log("Error happened");
+                    return;
+                }
+            });
+
+            
 
         })
     }
