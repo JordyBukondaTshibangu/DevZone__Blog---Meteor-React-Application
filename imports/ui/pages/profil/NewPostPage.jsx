@@ -41,9 +41,9 @@ const NewPostPage = props => {
 
     return (
         <div className="new-post-container">
-            { error && ReactDOM.createPortal( <Error>Oupsss...Something happened!</Error>, document.getElementById('react-feedback')) }
+            { error && ReactDOM.createPortal( <Error>Oupsss...Something happened!</Error>, document.getElementById('react-feedback'))}
             <h3>Add New Post </h3>
-            { success && ReactDOM.createPortal( <Success>Your Post was successfully created!</Success>, document.getElementById('react-feedback')) }
+            { success && ReactDOM.createPortal( <Success>Your Post was successfully created!</Success>, document.getElementById('react-feedback'))}
             <form onSubmit={submitPost}>
                <div className="new-post-section">
                     <div className="input-group">

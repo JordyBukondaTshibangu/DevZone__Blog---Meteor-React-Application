@@ -629,29 +629,29 @@ footer .menu-list ul li .list-item-group {
 .login-container {
   background: #eee;
   height: 100vh;
-  padding-left: 36%;
-  padding-top: 10%;
+  padding-left: 28%;
+  padding-top: 5%;
 }
 
 .login-box {
   background: #fff;
-  width: 400px;
-  padding-left: 10px;
-  padding-top: 15px;
+  width: 500px;
+  padding-left: 15px;
+  padding-top: 10px;
   box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
 }
 
 .login-box .input-group {
-  margin-top: 30px;
-  padding-left: 10px;
+  margin-top: 5px;
+  padding-left: 50px;
   align-items: center;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 .login-box  span {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 2px;
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .login-box  input {
   width: 50%;
@@ -659,7 +659,8 @@ footer .menu-list ul li .list-item-group {
   border-bottom: 1px solid #000;
   outline: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 10px;
+  padding: 7px;
+  margin-left: 15px;
 }
 
 .login-btn {
@@ -1207,7 +1208,7 @@ footer .menu-list ul li .list-item-group {
     }
     .login-box {
       background: #fff;
-      width: 400px;
+      width: 500px;
       padding-left: 30px;
       padding-top: 80px;
     }
