@@ -36,7 +36,8 @@ const SignUp = () => {
             fullName, 
             dateOfBirth : moment(dateState).format('MMMM Do YYYY'), 
             email, 
-            password
+            password,
+            createdAt : new Date()
         }
         Meteor.call('developer.create', newDev, error => {
             if(error) {

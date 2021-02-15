@@ -13,7 +13,9 @@ Meteor.methods({
 
         if(!dev) {
             return DevelopersCollection.insert({
-                fullName, dateOfBirth, email, password, avatar, myBio, createdAt : new Date()
+                fullName, dateOfBirth, email, password, 
+                avatar : "https://www.pngitem.com/pimgs/m/24-248235_user-profile-avatar-login-account-fa-user-circle.png", 
+                myBio, createdAt
             });
         };
         

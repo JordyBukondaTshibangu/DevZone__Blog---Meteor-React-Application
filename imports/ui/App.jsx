@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom'
 import NavBar from './components/NavBar';
 import SideBarMenu from './components/SideBarMenu';

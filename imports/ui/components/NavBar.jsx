@@ -9,6 +9,8 @@ const NavBar = props => {
 
     const dev = props.dev ;
     const [ showModal, setShowModal ] = useState(false);
+
+    const avatarAlt = "https://www.pngitem.com/pimgs/m/24-248235_user-profile-avatar-login-account-fa-user-circle.png";
     
 
     const handleLogout = () => {
@@ -16,6 +18,7 @@ const NavBar = props => {
         history.push('/sign-in')
     }
 
+    console.log(dev.avatar)
     return (
         <nav>
             <div className="logo-section">
@@ -36,7 +39,14 @@ const NavBar = props => {
                    </button>
             </div>
             <div className="account-section">
-                <img src={dev.avatar} alt="avatar" onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}}/>
+                {
+                    dev.avatar  ? 
+
+                    <img src={dev.avatar} alt={avatarAlt} onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}}/>
+                    :
+                    <img src={avatarAlt} alt="" onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}} />
+                }
+                
                 {
                     !showModal ? null : 
                     ReactDOM.createPortal(

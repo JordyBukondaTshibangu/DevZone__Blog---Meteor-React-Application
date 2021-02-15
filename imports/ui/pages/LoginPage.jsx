@@ -14,14 +14,14 @@ const LoginPage = () => {
         evt.preventDefault();
 
         const dev = { email, password }
-        Meteor.call('dev.login', dev, (error, dev) => {
+        Meteor.call('dev.login', dev, (error, res) => {
             if(error) {
                 setError("There was an error ")
                 
                 return ;
             }
-
-            localStorage.setItem('dev', JSON.stringify(dev))
+            
+            localStorage.setItem('dev', JSON.stringify(res))
             history.push('/')
         })
         
