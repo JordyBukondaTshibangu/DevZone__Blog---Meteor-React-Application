@@ -71,6 +71,10 @@ const UpdateProfile = props => {
                         <input type="text" value={updatedEmail} onChange={e => setEmail(e.target.value) } />
                     </div>
                     <div>
+                        <span>My Profil Picture</span>
+                        <input type="text" value={updatedAvatar} onChange={e => setAvatar(e.target.value) } />
+                    </div>
+                    <div>
                         <p>My bio</p>
                         <textarea type="text" value={updatedMyBio} onChange={e => setMyBio(e.target.value) } rows="7" cols="70" className="text-area-bio"></textarea>
                     </div>
