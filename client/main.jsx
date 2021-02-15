@@ -7,6 +7,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom';
 
 import { App } from '/imports/ui/App';
+import Footer from '../imports/ui/components/Footer'
 import ProtectedRoute from '../imports/ui/ProtectedRoute';
 
 import LoginPage from '../imports/ui/pages/LoginPage';
@@ -32,10 +33,12 @@ const routes = (
 
   <BrowserRouter>
     <div>
-      <App />
       <Switch>
         <Route path="/sign-in" exact component={LoginPage} />
         <Route path="/sign-up" exact component={SignUp} />
+      </Switch>
+      <App />
+      <Switch>
         <ProtectedRoute path="/" exact component={HomePage} />
 
         <ProtectedRoute path="/posts" exact component={PostsPage} />
@@ -51,6 +54,7 @@ const routes = (
 
         <ProtectedRoute path="/about" exact component={AboutPage} />
       </Switch>
+      <Footer />
     </div>
   </BrowserRouter>
 

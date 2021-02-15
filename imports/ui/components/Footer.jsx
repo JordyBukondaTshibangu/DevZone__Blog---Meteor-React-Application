@@ -3,7 +3,10 @@ import { Link  } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild,FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 
 const Footer = () => {
+    const dev = JSON.parse(localStorage.getItem('dev'));
+
     return (
+        !dev ? null : 
         <footer>
             <div className="menu-list">
                 <ul>
@@ -27,7 +30,7 @@ const Footer = () => {
                 </p>
                
             </div>
-        </footer>
+        </footer> 
     )
 }
 
