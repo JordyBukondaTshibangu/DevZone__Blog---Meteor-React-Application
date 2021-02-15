@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
-import { PostsCollection } from '../../api/collections/postCollections';
 import PostCard from '../components/PostCard';
 import ListUsers from '../components/ListUsers';
 import UserAccount from '../components/UserAccount';
+import {PostsCollection} from "../../db/posts/collection";
+import LoadingSpinner from '../components/LoadingSpinner';
 
 
-const HomePage = props => {
+const HomePage = ({posts, dev}) => {
+
     return (
         <div className="main">
-            <UserAccount dev={props.dev}/>
+            <UserAccount dev={dev}/>
             <div className="posts-list">
                 
                 {
-                    props.posts.map((post, index) => {
+                    posts.length === 0 ? <LoadingSpinner /> : 
+                    posts.map((post, index) => {
                     return <PostCard  key={index} post={post} />
                     })
                 }

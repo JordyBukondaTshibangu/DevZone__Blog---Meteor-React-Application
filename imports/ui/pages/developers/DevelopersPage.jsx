@@ -1,13 +1,15 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
-import { DevelopersCollection  } from '../../../api/collections/developersCollection';
+import { DevelopersCollection  } from '../../../db/developers/collection';
+import LoadingSpinner from '../../components/LoadingSpinner'
 
-const DevelopersPage = props => {
+const DevelopersPage = ({posts}) => {
 
     return (
         <div className="dev-page-container">
             {
-                props.posts.map((dev,index) => {
+                posts.length === 0 ? <LoadingSpinner /> : 
+                posts.map((dev,index) => {
 
                     const { fullName, avatar, email, myBio } = dev
 

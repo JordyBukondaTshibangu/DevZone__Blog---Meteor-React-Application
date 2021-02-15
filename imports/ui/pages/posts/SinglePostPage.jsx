@@ -1,20 +1,20 @@
 import React from 'react'
 import { withTracker } from 'meteor/react-meteor-data';
-import { PostsCollection } from '../../../api/collections/postCollections';
 import { useHistory } from 'react-router-dom';
+import {PostsCollection} from "../../../db/posts/collection";
 
 
 let  email = "jordytshibss@test.com";
 
-const SinglePostPage = props => {
+const SinglePostPage = ({dev, post}) => {
 
-    const dev = props.dev
+    const devObj = dev
 
-    if(!dev){
+    if(!devObj){
         useHistory().push('/sign-in');
     } 
 
-    const { title, tagline, description, image, author, content  } = props.post;
+    const { title, tagline, description, image, author, content  } = post;
 
     return (
         <div>

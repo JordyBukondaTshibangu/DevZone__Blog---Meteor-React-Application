@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -26,7 +27,9 @@ const PostCard = props => {
                 <img src={image} alt="/" />
             </div>
             <div className="card-footer">
-                like sections
+                <div className="view-all-posts">
+                    <h4>View All Posts </h4><Link to="/posts">click here</Link>
+                </div>
             </div>
             
         </div>

@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { Redirect } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
+import SideBarMenu from './components/SideBarMenu';
 
 const ProtectedRoute = props => {
 
+    const [ openMenu, setOpenMenu ] = useState(false);
+
+    const openSideMenu = () => {
+        setOpenMenu(!openMenu)
+    }
+    const closeSideMenu = () => {
+        setOpenMenu(false)
+    }
     // const dev = JSON.parse(localStorage.getItem('dev'));
 
     const dev = {
@@ -16,14 +26,15 @@ const ProtectedRoute = props => {
         password : '123456'
       }
 
-      console.log(dev);
-
     const Component = props.component;
     const isAuthenticated = "jordytshibss@test.com";
 
     return isAuthenticated ? (
         <div> 
-            <NavBar dev={dev}/> 
+            <NavBar dev={dev} openSideMenu={openSideMenu}/> 
+                {
+                    openMenu ? ReactDOM.createPortal(<SideBarMenu closeSideMenu={closeSideMenu}/>, document.getElementById('react-portal')) : null
+                }
                 <Component propsData={props} dev={dev}/> 
             <Footer/> 
         </div>) 

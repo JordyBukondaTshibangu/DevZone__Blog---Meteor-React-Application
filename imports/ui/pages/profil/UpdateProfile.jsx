@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router';
+import {  useHistory } from 'react-router';
+import ReactDOM from 'react-dom';
+import Success from '../../feedback/Success';
+import Error from '../../feedback/Error';
 
 const UpdateProfile = props => {
 
@@ -13,7 +16,8 @@ const UpdateProfile = props => {
     const [ updatedEmail, setEmail ] = useState(email);
     const [ updatedAvatar, setAvatar ] = useState(avatar);
     const [ updatedMyBio, setMyBio ] = useState(myBio);
-    const [ error, setError ] = useState();
+    const [ error, setError ] = useState(false);
+    const [ success, setSucces ] = useState(false)
 
     const editProfile = evt => {
 
@@ -30,18 +34,23 @@ const UpdateProfile = props => {
 
         Meteor.call('developer.update', updatedDev, (error, res) => {
             if(error) {
-                setError("something happened");
+                setError(true);
                 return;
             }
+
             localStorage.removeItem('dev');
             localStorage.setItem('dev', JSON.stringify(updatedDev))
-            history.push('/my-profile');
+            setSucces(true)
+            setTimeout(() => {
+                history.push('/my-profile');
+            }, 3000)
         })
     }
 
     return (
         <div className="profile-container">
-            { error }
+            { error && ReactDOM.createPortal( <Error>Oupsss...Something happened!</Error>, document.getElementById('react-feedback')) }
+            { success && ReactDOM.createPortal( <Success>Your Profile was successfully updated!</Success>, document.getElementById('react-feedback')) }
             <div className="user-details">
                 <form className="user">
                     <img src={updatedAvatar} alt=""/>

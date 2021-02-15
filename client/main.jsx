@@ -1,9 +1,10 @@
+import "/imports/api/posts/client";
+import "/imports/api/developers/client"
+
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom';
-import '../imports/api/collections/postCollections';
-import '../imports/api/collections/developersCollection';
 
 import { App } from '/imports/ui/App';
 import ProtectedRoute from '../imports/ui/ProtectedRoute';

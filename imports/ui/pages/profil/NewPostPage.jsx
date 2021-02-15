@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom'
+import Success from '../../feedback/Success';
+import Error from '../../feedback/Error';
 
 const NewPostPage = props => {
 
@@ -9,7 +12,9 @@ const NewPostPage = props => {
     const [description, setDescription ] = useState("");
     const [image, setImage ] = useState("");
     const [content, setContent ] = useState("");
-    const [ error, setError ] = useState("");
+    const [ error, setError ] = useState(false);
+    const [ success, setSuccess ] = useState(false);
+
 
     const submitPost = evt => {
 
@@ -21,18 +26,25 @@ const NewPostPage = props => {
         const post = { title, tagline, description, image, author, email, content };
 
         Meteor.call('post.create', post, (error) => {
-            if(error) setError("There was an error");
+            if(error) {
+                setError(true);
+                return;
+            };
 
-            history.push('/')
+            setSuccess(true);
+            setTimeout(()=> {
+                history.push('/');
+            },3000)
         })
     }
 
 
     return (
         <div className="new-post-container">
-            { error }
+            { error && ReactDOM.createPortal( <Error>Oupsss...Something happened!</Error>, document.getElementById('react-feedback'))}
             <h3>Add New Post </h3>
-           <form onSubmit={submitPost}>
+            { success && ReactDOM.createPortal( <Success>Your Post was successfully created!</Success>, document.getElementById('react-feedback'))}
+            <form onSubmit={submitPost}>
                <div className="new-post-section">
                     <div className="input-group">
                         <span>Title </span>
