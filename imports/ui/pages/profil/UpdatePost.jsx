@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import ReactDOM from 'react-dom';
+import {CKEditor} from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import Success from '../../feedback/Success';
 import Error from '../../feedback/Error';
 
@@ -19,6 +21,10 @@ const UpdatePost = props => {
     const [ error, setError ] = useState(false);
     const [ success, setSuccess ] = useState(false);
 
+    const handleChange = (e, editor) => {
+        const data = editor.getData();
+        setContent(data);
+    }
 
     const editPost = evt => {
 
@@ -48,15 +54,11 @@ const UpdatePost = props => {
               <div className="new-post-section">
                 <div className="input-group">
                     <span>Title </span>
-                    <input type="text" placeholder="Post title" value={updatedTitle} onChange={e => setTitle(e.target.value)} required/>
+                    <input type="text" placeholder="Post title" value={updatedTitle} onChange={e => setTitle(e.target.value)} className="input-title" required/>
                 </div>
                 <div className="input-group">
                     <span>TagLine </span>
                     <input type="text" placeholder="Add a small brieving of your post" value={updatedTagline} onChange={e => setTagline(e.target.value)} required/>
-                </div>
-                <div className="input-group">
-                    <span>Description </span>
-                    <input type="text" placeholder="Add a description of your post" value={updatedDescription} onChange={e => setDescription(e.target.value)} required/>
                 </div>
                 <div className="input-group">
                     <span>Image url </span>
@@ -65,11 +67,21 @@ const UpdatePost = props => {
                 <div className="image-uploaded">
                     <img src={updatedImage} alt="/"/>
                 </div>
-                <div className="input-group input-group-content">
-                    <span>Content </span>
-                    <textarea value={updatedContent} onChange={e => setContent(e.target.value)} required></textarea>
+                <div className="input-group">
+                    <span>Description </span>
+                    <textarea value={updatedDescription} onChange={e => setDescription(e.target.value)}></textarea>
                 </div>
-                <button type="submit">Edit Post </button>
+                </div>
+                <div className="content-container">
+                <CKEditor editor={ClassicEditor}
+                        data={updatedContent}
+                        onChange={handleChange}
+                        style={
+                            {
+                            'margin-bottom': '400px'
+                        }
+                        }/>
+                <button type="submit" className="new-post-section-button">Edit Post </button>
                 </div>
            </form>
         </div>

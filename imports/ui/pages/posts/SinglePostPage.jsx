@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import ReactHtmlParser from 'react-html-parser';
 import { withTracker } from 'meteor/react-meteor-data';
 import { useHistory } from 'react-router-dom';
 import {PostsCollection} from "../../../db/posts/collection";
@@ -28,7 +29,7 @@ const SinglePostPage = ({dev, post}) => {
             </div>
             <div>
                 <p><strong>Description</strong> {description}</p>
-                <p><strong>Content</strong> {content}</p>
+                <p><strong>Content</strong> {ReactHtmlParser(content)}</p>
             </div>
         </div>
     )

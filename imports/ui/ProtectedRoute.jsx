@@ -11,6 +11,7 @@ const ProtectedRoute = props => {
         history.push('/sign-up');
     
 
+
     const Component = props.component;
     const isAuthenticated = dev.email;
 

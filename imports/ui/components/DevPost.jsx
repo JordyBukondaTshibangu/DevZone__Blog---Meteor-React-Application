@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import ReactHtmlParser from 'react-html-parser';
 import { FaRegHeart, FaRegComment } from 'react-icons/fa';
 import Comments from './Comments';
+
 
 
 const DevPost = props => {
@@ -50,7 +52,7 @@ const DevPost = props => {
                 )
             }
                 <p>Content</p>
-                <p>{content}</p>
+                <p>{ReactHtmlParser(content)}</p>
         </div>
         <div className="post-card-img">
             <img src={image} alt="/" />

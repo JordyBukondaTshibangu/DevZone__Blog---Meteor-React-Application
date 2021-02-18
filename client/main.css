@@ -280,13 +280,14 @@ footer .menu-list ul li .list-item-group {
   margin: 10px auto;
   font-size: 24px;
   font-weight: 500;
+  height: 100%;
 }
 .new-post-section {
-  margin: 10px auto;
-  width: 55%;
+  margin: 1px auto;
+  width: 82%;
   background-color: #fff;
   padding: 10px;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  /* box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7); */
 }
 .new-post-section .input-group {
   margin: 10px 100px 10px 40px;
@@ -305,21 +306,36 @@ footer .menu-list ul li .list-item-group {
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px;
 }
+.new-post-section .input-title {
+  font-size: 24px;
+}
 .new-post-section .input-group-content {
   margin-top: 20px;
 }
+.content-container {
+  margin: 10px auto;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  /* box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7); */
+}
+.content-container .editor {
+  height: 500px;
+}
 .new-post-section textarea {
-  width: 100%;
+  width: 80%;
   outline: none;
-  height: 300px;
-  margin : 10px 25px;
+  height: 100px;
+  margin : 10px 100px;
   font-size: 16px;
   font-weight: 200px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px;
 }
-.new-post-section button {
-  margin: 60px 200px 50px 200px ;
+.new-post-section-button {
+  margin: 50px 360px ;
   width: 300px;
   height: 40px;
   border-radius: 3px;
@@ -328,8 +344,7 @@ footer .menu-list ul li .list-item-group {
   transition: 0.6s;
   border: none;
 }
-.new-post-section button:hover {
-  margin: 58px 200px 50px 200px ;
+.new-post-section-button:hover {
   width: 320px;
   height: 45px;
   background-color: #000;
@@ -1063,8 +1078,16 @@ footer .menu-list ul li .list-item-group {
   .new-post-section {
     margin: -180px auto 100px;
     width: 75%;
-    height: 100%;
     padding: 5px;
+  }
+  .content-container {
+    margin: 10px auto;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    width: 90%;
+    padding: 20px;
+    background-color: #fff;
+    /* box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7); */
   }
   .dev-page-container {
     grid-template-columns: 1fr;

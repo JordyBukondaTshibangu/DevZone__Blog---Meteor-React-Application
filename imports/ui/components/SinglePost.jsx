@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import ReactHtmlParser from 'react-html-parser';
 import {Link, useHistory } from 'react-router-dom';
 
 const SinglePost = props => {
@@ -51,7 +52,7 @@ const SinglePost = props => {
                         )
                     }
                         <p>Content</p>
-                        <p>{content}</p>
+                        <p>{ReactHtmlParser(content)}</p>
                 </div>
                 <div className="post-card-img">
                     <img src={image} alt="/" />
