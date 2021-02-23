@@ -5,6 +5,7 @@ import {CKEditor} from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import Success from '../../../feedback/Success';
 import Error from '../../../feedback/Error';
+import './NewPostPage.css';
 
 const NewPostPage = props => {
 
@@ -23,27 +24,13 @@ const NewPostPage = props => {
     }
 
     const submitPost = evt => {
-
         evt.preventDefault();
-
         const email = props.dev.email;
         const author = props.dev.fullName;
-
-        const post = {
-            title,
-            tagline,
-            description,
-            image,
-            author,
-            email,
-            content
-        };
+        const post = { title, tagline, description, image, author, email, content };
 
         Meteor.call('post.create', post, (error) => {
-            if (error) {
-                setError(true);
-                return;
-            };
+            if (error)  setError(true);
 
             setSuccess(true);
             setTimeout(() => {
@@ -51,83 +38,42 @@ const NewPostPage = props => {
             }, 3000)
         })
     }
-
-
     return (
         <div className="new-post-container">
             {
-            error && ReactDOM.createPortal (
-                <Error>Oupsss...Something happened!</Error>,
-                document.getElementById('react-feedback')
-            )
-        }
-            <h3>Add New Post
-            </h3>
+                error && ReactDOM.createPortal (<Error>Oupsss...Something happened!</Error>, document.getElementById('react-feedback'))
+            }
+            <h3> Share Your Story ... </h3>
             {
-            success && ReactDOM.createPortal (
-                <Success>Your Post was successfully created!</Success>,
-                document.getElementById('react-feedback')
-            )
-        }
+                success && ReactDOM.createPortal ( <Success>Your Post was successfully created!</Success>,document.getElementById('react-feedback'))
+            }
             <form onSubmit={submitPost}>
-                <div className="new-post-section">
-                    <div className="input-group">
-                        <span>Title
-                        </span>
-                        <input type="text"
-                            value={title}
-                            onChange={
-                                e => setTitle(e.target.value)
-                            }
-                            className="input-title"
-                            required/>
+                <div className="header-container">
+                    <div className="new-post-section">
+                        <div className="input-group">
+                            <input type="text" placeholder="Headline" value={title} onChange={ e => setTitle(e.target.value)} className="input-title" required/>
+                        </div>
+                        <div className="input-group">
+                            <input type="text" placeholder="Add a description of less than 100 words" value={tagline} onChange={e => setTagline(e.target.value)}required/>
+                        </div>
+                        <div className="input-group">
+                            <input type="text" placeholder="image url" value={image} onChange={ e => setImage(e.target.value)}/>
+                        </div> 
+                        <div className="input-group">
+                            <input value={description} placeholder="Add a description of less than 200 words" onChange={ e => setDescription(e.target.value)} className="description-text" required/>
+                        </div>
                     </div>
-                    <div className="input-group">
-                        <span>TagLine
-                        </span>
-                        <input type="text"
-                            value={tagline}
-                            onChange={
-                                e => setTagline(e.target.value)
-                            }
-                            required/>
-                    </div>
-                    <div className="input-group">
-                        <span>Image url
-                        </span>
-                        <input type="text"
-                            value={image}
-                            onChange={
-                                e => setImage(e.target.value)
-                            }/>
-                    </div>
-                    {
-                    image ? <div className="image-uploaded">
-                        <img src={image}
-                            alt="/"/>
-                    </div> : null
-                }
-                <div className="input-group">
-                        <span>Description
-                        </span>
-                        <textarea  value={description}
-                            onChange={
-                                e => setDescription(e.target.value)
-                            }
-                            required ></textarea>
-                    </div>
+                    <div className="image-uploaded">
+                        {
+                            image &&   <img src={image} alt="/"/>
+                        }
+                    </div> 
                 </div>
                 <div className="content-container">
                     <CKEditor editor={ClassicEditor}
                         data={content}
-                        onChange={handleChange}
-                        style={
-                            {
-                            'margin-bottom': '400px'
-                        }
-                        }/> 
-                    <button type="submit" className="new-post-section-button">Add Post
-                    </button>
+                        onChange={handleChange}/> 
+                    <button type="submit" className="new-post-section-button">Add Post </button>
                 </div>
             </form>
         </div>

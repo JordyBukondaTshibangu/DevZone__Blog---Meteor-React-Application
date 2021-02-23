@@ -51,26 +51,24 @@ const UpdatePost = props => {
             <h3>Edit Post </h3>
             { success && ReactDOM.createPortal( <Success>Your Post was successfully updated!</Success>, document.getElementById('react-feedback')) }
             <form onSubmit={editPost}>
-              <div className="new-post-section">
-                <div className="input-group">
-                    <span>Title </span>
-                    <input type="text" placeholder="Post title" value={updatedTitle} onChange={e => setTitle(e.target.value)} className="input-title" required/>
-                </div>
-                <div className="input-group">
-                    <span>TagLine </span>
-                    <input type="text" placeholder="Add a small brieving of your post" value={updatedTagline} onChange={e => setTagline(e.target.value)} required/>
-                </div>
-                <div className="input-group">
-                    <span>Image url </span>
-                    <input type="text" value={updatedImage} onChange={e => setImage(e.target.value)}/>
-                </div>
-                <div className="image-uploaded">
-                    <img src={updatedImage} alt="/"/>
-                </div>
-                <div className="input-group">
-                    <span>Description </span>
-                    <textarea value={updatedDescription} onChange={e => setDescription(e.target.value)}></textarea>
-                </div>
+                <div className="header-container">
+                    <div className="new-post-section">
+                        <div className="input-group">
+                            <input type="text" placeholder="Post title" value={updatedTitle} onChange={e => setTitle(e.target.value)} className="input-title" required/>
+                        </div>
+                        <div className="input-group">
+                            <input type="text" placeholder="Add a small brieving of your post" value={updatedTagline} onChange={e => setTagline(e.target.value)} required/>
+                        </div>
+                        <div className="input-group">
+                            <input type="text" value={updatedImage} onChange={e => setImage(e.target.value)}/>
+                        </div>
+                        <div className="input-group">
+                            <input value={updatedDescription} onChange={e => setDescription(e.target.value)} className="description-text"/>
+                        </div>
+                    </div>
+                    <div className="image-uploaded">
+                        <img src={updatedImage} alt="/"/>
+                    </div>
                 </div>
                 <div className="content-container">
                 <CKEditor editor={ClassicEditor}
