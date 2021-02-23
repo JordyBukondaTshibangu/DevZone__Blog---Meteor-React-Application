@@ -15,7 +15,7 @@ import SignUp from '../imports/ui/pages/signup/SignUp.jsx';
 import HomePage from '../imports/ui/pages/home/HomePage.jsx';
 
 
-import SinglePost from '../imports/ui/pages/posts/SinglePostPage';
+import SinglePost from '../imports/ui/pages/posts/SinglePost/SinglePostPage.jsx';
 import PostsPage from '../imports/ui/pages/posts/AllPost/AllPostsPage.jsx';
 import MyPosts from '../imports/ui/pages/profil/MyPosts';
 import UpdatePost from '../imports/ui/pages/profil/UpdatePost'

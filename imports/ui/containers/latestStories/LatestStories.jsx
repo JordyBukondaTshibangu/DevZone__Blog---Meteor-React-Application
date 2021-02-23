@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import LatestStory from '../../components/latestStory/LatestStory.jsx';
 import LatestStorySide from '../../components/latestStorySide/LatestStorySide.jsx';
 import './LatestStories.css';
@@ -6,20 +7,23 @@ import './LatestStories.css';
 
 const LatestStories = ({posts}) => {
     
+    let history = useHistory();
     const length = posts.length
     const latestStory = posts[length - 2];
     const latestStorySide = [posts[length-5], posts[length-3], posts[length - 4]];
 
-    console.log(latestStory);
+    const handleViewPost = (_id) => {
+        history.push(`/posts/${_id}`)
+    }
     
     return (
         <div className="latest-stories">
-            <div>
+            <div onClick={() => handleViewPost(latestStory._id)}>
                 <LatestStory latestStory={latestStory}/>
             </div>
             <div className="latest-stories-side">
                 {
-                    latestStorySide.map((latestStorySide, index) => <LatestStorySide key={index} latestStorySide={latestStorySide} />)
+                    latestStorySide.map((latestStorySide, index) => <div key={index} onClick={()=> handleViewPost(latestStorySide._id)}><LatestStorySide latestStorySide={latestStorySide} /></div>)
                 }
             </div>
 

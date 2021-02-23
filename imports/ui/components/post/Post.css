@@ -1,0 +1,40 @@
+.single-post {
+    padding-left: 30px;
+}
+.single-post h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.single-post-img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.single-post-img img {
+    width: 100%;
+}
+.single-post span {
+    font-weight: 800;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.single-post-img span {
+    font-size: 10px;
+    font-weight: 800;
+    color: grey;
+}
+.single-post-content p {
+    margin-top: 15px;
+    margin-top: 15px;
+}
+.post-content {
+    background-color: #f7f7f7;
+    margin-top: 20px;
+    padding: 15px;
+    margin-bottom: 180px;
+    padding-bottom: 80px;
+    letter-spacing: 1px;
+}

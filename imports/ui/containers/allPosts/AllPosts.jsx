@@ -1,17 +1,22 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import MostViewedPost from '../../components/mostViewedPost/MostViewedPost.jsx';
 import './AllPosts.css';
 
 const AllPosts = ({posts}) => {
-    console.log(posts);
+    let history = useHistory();
+
+    const handleViewPost = (_id) => {
+        history.push(`/posts/${_id}`)
+    }
     return (
         <div className="posts-list">
              {
                 posts.length < 1 ? null : 
-                posts.map((post, index) => <MostViewedPost key={index} mostViewedPost={post} />)
+                posts.map((post, index) => <div onClick={() => handleViewPost(post._id)} key={index} ><MostViewedPost mostViewedPost={post}/></div>)
             }
         </div>
     )
 }
 
-export default AllPosts
+export default AllPosts;
