@@ -33,6 +33,22 @@
   outline: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px;
+  padding-left: 0;
+}
+.new-post-section select {
+  padding: 10px;
+  padding-left: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  color: rgb(106, 106, 106);
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #000
+}
+.new-post-section option {
+  width: 100%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
 }
 .new-post-section .description-text {
   width: 120%;

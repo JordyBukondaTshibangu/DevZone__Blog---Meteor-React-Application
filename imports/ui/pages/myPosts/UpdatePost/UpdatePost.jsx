@@ -11,9 +11,10 @@ const UpdatePost = props => {
     let history = useHistory();
 
     const post = props.propsData.location.state;
-    const { _id, title, tagline, description, image,  content } = post
+    const { _id, title, tagline, description, image,  content, category } = post
 
     const [ updatedTitle, setTitle ] = useState(title);
+    const [ updatedCategory, setCategory ] = useState(category);
     const [ updatedTagline, setTagline ] = useState(tagline);
     const [ updatedDescription, setDescription ] = useState(description);
     const [ updatedImage, setImage ] = useState(image);
@@ -56,6 +57,21 @@ const UpdatePost = props => {
                         <div className="input-group">
                             <input type="text" placeholder="Post title" value={updatedTitle} onChange={e => setTitle(e.target.value)} className="input-title" required/>
                         </div>
+                        <div className="input-group">
+                            <select value={updatedCategory} onChange={event => setCategory(event.target.value)}>
+                                <option value="programming">{updatedCategory}</option>
+                                <option value="programming">Programming</option>
+                                <option value="health">Health</option>
+                                <option value="science">Science</option>
+                                <option value="architecture">Architecture</option>
+                                <option value="chemistry">Chemistry</option>
+                                <option value="tech">Tech</option>
+                                <option value="artificial intelligence">Artificial intelligence</option>
+                                <option value="culture">Culture</option>
+                                <option value="music">Music</option>
+                                <option value="religion">Religion</option>
+                            </select>
+                        </div> 
                         <div className="input-group">
                             <input type="text" placeholder="Add a small brieving of your post" value={updatedTagline} onChange={e => setTagline(e.target.value)} required/>
                         </div>

@@ -11,6 +11,7 @@ const NewPostPage = props => {
 
     let history = useHistory()
     const [title, setTitle] = useState("");
+    const [category, setCategory] = useState("");
     const [tagline, setTagline] = useState("");
     const [description, setDescription] = useState("");
     const [image, setImage] = useState("");
@@ -27,7 +28,7 @@ const NewPostPage = props => {
         evt.preventDefault();
         const email = props.dev.email;
         const author = props.dev.fullName;
-        const post = { title, tagline, description, image, author, email, content };
+        const post = { title, category, tagline, description, image, author, email, content };
 
         Meteor.call('post.create', post, (error) => {
             if (error)  setError(true);
@@ -53,6 +54,21 @@ const NewPostPage = props => {
                         <div className="input-group">
                             <input type="text" placeholder="Headline" value={title} onChange={ e => setTitle(e.target.value)} className="input-title" required/>
                         </div>
+                        <div className="input-group">
+                            <select value={category} onChange={event => setCategory(event.target.value)}>
+                                <option value="programming">Select a category</option>
+                                <option value="programming">Programming</option>
+                                <option value="health">Health</option>
+                                <option value="science">Science</option>
+                                <option value="architecture">Architecture</option>
+                                <option value="chemistry">Chemistry</option>
+                                <option value="tech">Tech</option>
+                                <option value="artificial intelligence">Artificial intelligence</option>
+                                <option value="culture">Culture</option>
+                                <option value="music">Music</option>
+                                <option value="religion">Religion</option>
+                            </select>
+                        </div> 
                         <div className="input-group">
                             <input type="text" placeholder="Add a description of less than 100 words" value={tagline} onChange={e => setTagline(e.target.value)}required/>
                         </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory  } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
+import './MyProfile.css';
 
 let email = "jordytshibss@test.com";
 
@@ -10,26 +11,16 @@ const MyProfile = props => {
     const dev = props.dev;
     let history = useHistory();
 
-    if(!dev){
-        useHistory().push('/sign-in');
-    } 
-
-    const { fullName, dateOfBirth, myBio, avatar, createdAt } = dev
-
-    let joinOn  = "";
-    if(createdAt) {
-
-        joinOn = createdAt.toString();
-    }
-
+    if(!dev) useHistory().push('/sign-in');
+    
+    const { fullName, dateOfBirth, myBio, avatar } = dev
+    
     const [ error, setError ] = useState("");
     
     const handleDeleteAccount = () => {
-        Meteor.call('developer.remove', email, (error) => {
-            if(error){
-                setError("There was an error");
-                return;
-            }
+        Meteor.call('developer.remove', email, error => {
+            if(error) setError("There was an error");
+            
             history.push('/sign-up');
         })
     }
@@ -63,7 +54,7 @@ const MyProfile = props => {
                         </div>
                         <div>
                             <span>Join on : </span>
-                            <input type="text" value={joinOn} disabled />
+                            <input type="text" value={""} disabled />
                         </div>
                     </div>
                     <div>

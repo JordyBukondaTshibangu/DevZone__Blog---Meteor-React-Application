@@ -7,6 +7,7 @@ Meteor.methods({
 
         return PostsCollection.insert({
             title,
+            category,
             tagline,
             description,
             image,
@@ -18,7 +19,7 @@ Meteor.methods({
             createdAt: new Date(),
         })
     },
-    'post.update'({_id, updatedTitle, updatedTagline, updatedDescription, updatedImage, updatedContent}){
+    'post.update'({_id, updatedCategory, updatedTitle, updatedTagline, updatedDescription, updatedImage, updatedContent}){
 
         if (!updatedTitle || !updatedTagline || !updatedDescription  || !updatedContent) return
 
@@ -26,6 +27,7 @@ Meteor.methods({
             {$set :
                     {
                         title : updatedTitle,
+                        category : updatedCategory,
                         tagline : updatedTagline,
                         description : updatedDescription,
                         image : updatedImage,
