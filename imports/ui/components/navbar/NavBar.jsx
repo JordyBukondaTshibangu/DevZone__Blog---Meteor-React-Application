@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { Link , useHistory } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild, FaUser, FaCog } from 'react-icons/fa';
+import './NavBar.css';
 
 const NavBar = props => {
 

@@ -7,7 +7,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom';
 
 import { App } from '/imports/ui/App';
-import Footer from '../imports/ui/components/Footer'
+import Footer from '../imports/ui/components/footer/Footer.jsx'
 import ProtectedRoute from '../imports/ui/ProtectedRoute';
 
 import LoginPage from '../imports/ui/pages/login/LoginPage.jsx';

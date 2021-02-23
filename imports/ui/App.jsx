@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom'
-import NavBar from './components/NavBar';
+import NavBar from './components/navbar/NavBar.jsx';
 import SideBarMenu from './components/SideBarMenu';
 
 export const App = () => {

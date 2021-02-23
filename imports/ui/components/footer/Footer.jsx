@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild,FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
+import './Footer.css';
 
 const Footer = () => {
     const dev = JSON.parse(localStorage.getItem('dev'));

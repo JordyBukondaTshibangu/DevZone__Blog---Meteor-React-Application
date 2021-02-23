@@ -2,7 +2,7 @@ import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { DevelopersCollection } from '../../../db/developers/collection';
 import DevCard from '../../components/devCard/DevCard.jsx'
-import LoadingSpinner from '../../components/LoadingSpinner';
+import LoadingSpinner from '../../feedback/LoadingSpinner';
 import './DevZoners.css';
 
 

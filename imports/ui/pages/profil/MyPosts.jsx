@@ -3,7 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data'
 import { useHistory } from 'react-router-dom';
 import SinglePost from '../../components/SinglePost';
 import {PostsCollection} from "../../../db/posts/collection";
-import LoadingSpinner from '../../components/LoadingSpinner';
+import LoadingSpinner from '../../feedback/LoadingSpinner';
 
 let email = "jordytshibss@test.com"
 

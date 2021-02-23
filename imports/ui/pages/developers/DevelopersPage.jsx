@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data'
 import { DevelopersCollection  } from '../../../db/developers/collection';
-import LoadingSpinner from '../../components/LoadingSpinner';
+import LoadingSpinner from '../../feedback/LoadingSpinner';
 import DevProfile from '../../components/devProfile/DevProfile.jsx'
 import './DevelopersPage.css';
 
