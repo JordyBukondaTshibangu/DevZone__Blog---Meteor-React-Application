@@ -1,9 +1,11 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
 import { useHistory } from 'react-router-dom';
-import SinglePost from '../../components/SinglePost';
-import {PostsCollection} from "../../../db/posts/collection";
-import LoadingSpinner from '../../feedback/LoadingSpinner';
+import { PostsCollection } from "../../../../db/posts/collection";
+import MyPosts from '../../../containers/myPosts/MyPosts.jsx'
+import PostsSideBar from '../../../components/myPostsSideBar/PostsSideBar.jsx';
+import './MyPostsPage.css'
+
 
 let email = "jordytshibss@test.com"
 
@@ -18,10 +20,12 @@ const PostsPage = ({dev, posts}) => {
 
     return (
         <div className="posts-page-container">
-            {    
-                posts.length === 0 ? <LoadingSpinner/> :  
-                posts.map((post,index) => <SinglePost post={post} key={index}/>)
-            }
+           <div className="posts-list">
+              <MyPosts posts={posts} />
+           </div>
+           <div className="post-sidebar">
+               <PostsSideBar />
+           </div>
         </div>
     )
 }

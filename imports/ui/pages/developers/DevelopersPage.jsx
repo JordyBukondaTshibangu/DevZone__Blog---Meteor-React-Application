@@ -17,13 +17,16 @@ const DevelopersPage = ({posts}) => {
                 posts.length === 0 ? <LoadingSpinner /> : 
                 posts.map((dev,index) => {
 
-                    const { fullName, avatar } = dev
+                    const { fullName, avatar, email } = dev
 
                     return (
                         <div key={index} className="dev-card">
                             <img src={avatar} alt="/"/>
                             <div className="dev-card-body">
                                 <h4>{fullName}</h4>
+                                <h6>{email}</h6>
+                                <br></br>
+                                <hr></hr>
                             </div>
                             <div className="dev-card-button">
                                 <button onClick={() => setShowProfile(!showProfile)}>View Profile</button>

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
+import { Link } from 'react-router-dom';
 import './Post.css';
 
 const Post = ({post}) => {
@@ -11,7 +12,8 @@ const Post = ({post}) => {
             <h2>{title}</h2>
             <div className="single-post-img">
                 <img src={image} alt="/" />
-                <span>{author}</span>
+                <span>{author} || </span>
+                <span><Link to="/devs"> - view authors &rarr;</Link></span>
             </div>
             <div className="single-post-content">
                 <span>Tagline : </span>

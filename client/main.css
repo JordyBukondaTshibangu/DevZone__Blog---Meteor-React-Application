@@ -211,96 +211,7 @@
   box-shadow: 7px 7px 10px 0 rgb(0, 0, 0,.7);
 }
 
-.posts-page-container {
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: #eee;
-  text-align: center;
-  padding-top: 20px;
-}
-.posts-page-container .post-card {
-  margin: auto;
-  width: 50%;
-  background-color: #fff;
-  margin-bottom: 120px;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  padding-top: 50px;
-}
-.posts-list .card .card-head{
-  padding: 20px;
-  padding-bottom: 20px;
-}
 
-.post-card-head h1{
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-  margin: 25px 100px 5px 100px;
-}
-.post-card-head span {
-  font-weight: 100;
-  font-size : 10px;
-}
-.post-card-head p {
-  margin: 25px 10px 15px 10px;
-  font-size : 16px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.post-card-img {
-  height: 300px;
-  padding: 10px;
-}
-.post-card-img img {
-  width: 100%;
-  height: 300px;
-  cursor: pointer;
-  transition: 0.6s;
-}
-.post-description {
-  margin: 10px 5px;
-  box-shadow: 5px 5px 30px 0 rgb(0, 0, 0,.7);
-  padding: 10px;
-  font-size: 14px;
-}
-.btn-description {
-  width: 150px;
-  height: 30px;
-  color: #000;
-  background-color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-  border: 1px solid black;
-  margin-top: 20px;
-  transition: 0.6s;
-  cursor: pointer;
-}
-
-.btn-section {
-  margin: auto;
-  margin-top: 50px;
-  height: 50px;
-  width: 500px;
-  padding-top: 10px;
-}
-.btn-section button {
-  width: 150px;
-  height: 30px;
-  color: #000;
-  background-color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-  border: 1px solid black;
-  transition: 0.6s;
-  cursor: pointer;
-  margin-left: 20px;
-  transition: 0.6s;
-}
-.btn-section button:hover {
-  background-color: #000;
-  color: white;
-  box-shadow: 2px 2px 2px 8px rgb(0, 0, 0,.6);
-}
 
 .profile-container {
   margin: 20px 180px;
@@ -604,44 +515,6 @@
   background-color: rgb(0, 0, 0,.8);
   z-index: 1000;
 }
-.side-bar-menu {
-  position : fixed;
-  width: 200px;
-  height : 100vh;
-  background :#000;
-  padding : 50px;
-  z-index : 1000;
-  transition: 0.6s; 
-  color: #000;
-  background: #fff;
-}
-.side-bar-menu  ul {
-  list-style: none;
-  padding-top: 10px;
-}
-.side-bar-menu  ul li {
-  list-style: none;
-  margin-top: 30px;
-  color: #000;
-  font-size: 22px;
-}
-.side-bar-menu  ul li .list-item-group {
-  text-decoration: none;
-  color: #000;
-}
-.list-item-group span {
-  margin-left: 18px;
-}
-.side-bar-menu button {
-  width: 80%;
-  height: 50px;
-  font-size: 22px;
-  color: #fff;
-  font-weight: 800;
-  border: 1px solid #000;
-  background: #000;
-  margin-top: 50px;
-}
 .sk-cube-grid {
   width: 60px;
   height: 60px;
@@ -708,39 +581,6 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
  
-  .side-bar-menu {
-    position : fixed;
-    width: 800px;
-    height : 2700px;
-    transform : translate(60%, 0%);
-  }
-  .side-bar-menu  ul {
-    list-style: none;
-    padding-top: 20px;
-  }
-  .side-bar-menu  ul li {
-    list-style: none;
-    margin-top: 70px;
-    color: #000;
-    font-size: 32px;
-  }
-  .side-bar-menu  ul li .list-item-group {
-    text-decoration: none;
-    color: #000;
-  }
-  .list-item-group span {
-    margin-left: 18px;
-  }
-  .side-bar-menu button {
-    width: 40%;
-    height: 80px;
-    font-size: 32px;
-    color: #fff;
-    font-weight: 800;
-    border: 1px solid #000;
-    background: #000;
-    margin-top: 50px;
-  }
   .main {
     display: grid;
     grid-template-columns: 1fr;

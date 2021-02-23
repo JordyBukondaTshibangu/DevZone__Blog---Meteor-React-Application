@@ -8,10 +8,11 @@
 .dev-page-container .dev-card {
   width: 75%;
   margin-bottom: 30px;
-  height: 250px;
+  height: 280px;
   background-color: #fff;
   box-shadow: 3px 3px 10px 0 rgb(0, 0, 0,.4);
   cursor: pointer;
+  text-align: center;
 }
 
 .dev-page-container .dev-card img {
@@ -24,8 +25,11 @@
 .dev-page-container .dev-card-body h4 {
   letter-spacing: 1px;
   font-size: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: 500;
+}
+.dev-page-container .dev-card-body h6 {
+  font-weight: 800;
 }
 .dev-card-button {
   display: flex;

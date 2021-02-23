@@ -17,12 +17,13 @@ import HomePage from '../imports/ui/pages/home/HomePage.jsx';
 
 import SinglePost from '../imports/ui/pages/posts/SinglePost/SinglePostPage.jsx';
 import PostsPage from '../imports/ui/pages/posts/AllPost/AllPostsPage.jsx';
-import MyPosts from '../imports/ui/pages/profil/MyPosts';
-import UpdatePost from '../imports/ui/pages/profil/UpdatePost'
+import MyPosts from '../imports/ui/pages/myPosts/myPosts/MyPostsPage.jsx';
+import UpdatePost from '../imports/ui/pages/myPosts/updatePost/UpdatePost.jsx'
+import NewPostPage from '../imports/ui/pages/myPosts/newPost/NewPostPage.jsx';
 
-import UpdateProfil from '../imports/ui/pages/profil/UpdateProfile';
-import MyProfile from '../imports/ui/pages/profil/MyProfile';
-import NewPostPage from '../imports/ui/pages/profil/NewPostPage';
+import UpdateProfil from '../imports/ui/pages/profil/updateProfile/UpdateProfile.jsx';
+import MyProfile from '../imports/ui/pages/profil/myProfile/MyProfile.jsx';
+
 
 import DevelopersPage from '../imports/ui/pages/developers/DevelopersPage.jsx';
 import AboutPage from '../imports/ui/pages/about/AboutPage.jsx';
