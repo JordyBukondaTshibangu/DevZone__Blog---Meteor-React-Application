@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { withTracker } from 'meteor/react-meteor-data'
 import { DevelopersCollection  } from '../../../db/developers/collection';
-import LoadingSpinner from '../../components/LoadingSpinner'
+import LoadingSpinner from '../../components/LoadingSpinner';
+import DevProfile from '../../components/devProfile/DevProfile.jsx'
+import './DevelopersPage.css';
 
 const DevelopersPage = ({posts}) => {
+    const [ showProfile, setShowProfile ] = useState(false);
+
+    const closeProfileModal = () => { setShowProfile(false)}
 
     return (
         <div className="dev-page-container">
@@ -11,16 +17,23 @@ const DevelopersPage = ({posts}) => {
                 posts.length === 0 ? <LoadingSpinner /> : 
                 posts.map((dev,index) => {
 
-                    const { fullName, avatar, email, myBio } = dev
+                    const { fullName, avatar } = dev
 
                     return (
                         <div key={index} className="dev-card">
                             <img src={avatar} alt="/"/>
                             <div className="dev-card-body">
                                 <h4>{fullName}</h4>
-                                <h5>{email}</h5>
-                                <p>{myBio}</p>
                             </div>
+                            <div className="dev-card-button">
+                                <button onClick={() => setShowProfile(!showProfile)}>View Profile</button>
+                                <button>Follow</button>
+                            </div>
+                            {
+                                showProfile && 
+                                ReactDOM.createPortal(<DevProfile dev={dev} closeProfileModal={closeProfileModal}/>, document.getElementById('react-user-profile'))
+
+                            }
                         </div>)
                 })
             }

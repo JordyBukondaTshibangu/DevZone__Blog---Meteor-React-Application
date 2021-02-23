@@ -1,0 +1,15 @@
+.blogger-card {
+    margin: 15px;
+    height: 90%;
+    width: 80%;
+    color: #000;
+    text-align: center;
+  }
+  .blogger-card img {
+    width: 100%;
+  }
+  .bloger-card-body {
+    background-color: #f7f7f7;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }

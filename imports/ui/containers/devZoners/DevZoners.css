@@ -1,0 +1,9 @@
+  .blogers-list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 10px;
+}
+  

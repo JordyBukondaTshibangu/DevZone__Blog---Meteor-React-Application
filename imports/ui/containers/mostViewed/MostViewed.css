@@ -1,0 +1,6 @@
+.most-viewed {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin: 20px 10px;
+}
