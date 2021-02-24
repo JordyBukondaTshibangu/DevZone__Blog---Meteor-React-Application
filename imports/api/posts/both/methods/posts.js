@@ -1,12 +1,13 @@
 import {PostsCollection} from "/imports/db/posts/collection";
 
 Meteor.methods({
-    'post.create'({ title, tagline, description, image, author, email, content}){
+    'post.create'({ title, category, tagline, description, image, author, email, content}){
 
-        if (!title || !tagline || !description || !author || !email || !content) return
+        if (!title || !category || !tagline || !description || !author || !email || !content) return
 
         return PostsCollection.insert({
             title,
+            category,
             tagline,
             description,
             image,
@@ -18,7 +19,7 @@ Meteor.methods({
             createdAt: new Date(),
         })
     },
-    'post.update'({_id, updatedTitle, updatedTagline, updatedDescription, updatedImage, updatedContent}){
+    'post.update'({_id, updatedCategory, updatedTitle, updatedTagline, updatedDescription, updatedImage, updatedContent}){
 
         if (!updatedTitle || !updatedTagline || !updatedDescription  || !updatedContent) return
 
@@ -26,6 +27,7 @@ Meteor.methods({
             {$set :
                     {
                         title : updatedTitle,
+                        category : updatedCategory,
                         tagline : updatedTagline,
                         description : updatedDescription,
                         image : updatedImage,

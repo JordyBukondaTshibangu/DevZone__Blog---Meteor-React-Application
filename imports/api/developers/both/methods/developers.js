@@ -4,8 +4,9 @@ import { Email } from 'meteor/email';
 
 Meteor.methods({
     'developer.create'({fullName, dateOfBirth, email, password}){
-        const avatar = "";
+        
         const myBio = "";
+        const followers = [];
 
         if(!fullName || !dateOfBirth || !email || !password)  return ;
 
@@ -15,7 +16,7 @@ Meteor.methods({
             return DevelopersCollection.insert({
                 fullName, dateOfBirth, email, password, 
                 avatar : "https://www.pngitem.com/pimgs/m/24-248235_user-profile-avatar-login-account-fa-user-circle.png", 
-                myBio, createdAt
+                myBio, createdAt : new Date(), followers
             });
         };
         

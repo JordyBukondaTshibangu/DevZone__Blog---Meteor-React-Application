@@ -4,191 +4,18 @@
   font-family: 'Poppins', sans-serif;
   z-index: 1;
 }
-nav {
-  background-color: #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: 0.6s;
-  padding: 5px 50px;
-}
-
-nav .logo {
-  position: relative;
-  font-weight: 700;
-  color: #fff;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: 0.6s;
-}
-nav ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-nav .menu-section ul li {
-  position: relative;
-  list-style: none;
-  font-size: 12px;
-}
-nav .menu-section ul li .list-item-group {
-  position: relative;
-  margin: 0 15px;
-  padding-left: 15px;
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 1px;
-  height: 15px;
-}
-.list-item-group span {
-  margin-left: 10px;
-}
-
-nav .account-section .user-account {
-  position: fixed;
-  margin-left: -70px;
-  width: 160px;
-  height: 150px;
-  background: #eee;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 5px;
-}
-nav .account-section .user-account-modal {
-  display: block;
-  padding-left: 5px;
-  
-}
-nav .account-section .user-account-modal li {
-  list-style: none;
-  font-size: 14px;
-  border-bottom: 1px solid #000;
-  margin-top: 10px;
-  transition: 0.6s;
-}
-nav .account-section .user-account-modal li:hover{
-  list-style: none;
-  font-size: 16px;
-  border-bottom: 1px solid rgb(133, 129, 129);
-}
-nav .account-section ul li .list-item-group {
-  position: relative;
-  padding-left: 15px;
-  text-decoration: none;
-  color: #000;
-  letter-spacing: 1px;
-  height: 15px;
-}
-nav .account-section ul li button {
-  width: 150px;
-  height: 24px;
-  font-weight: 800;
-  border: 1px solid #000;
-  cursor: pointer;
-  background: #fff;
-  transition: 0.6s;
-}
-nav .account-section ul li button:hover {
-  background: #000;
-  color: #fff;
-}
-nav .hamburger-icon-section {
-  width: 0px;
-  height: 0px;
-  background-color: #000;
-}
-nav .hamburger-icon-section button {
-  width: 0px;
-  height: 0px;
-  background-color: #000;
-  font-size: 0px;
-}
-
-nav .hamburger-icon-section  img {
-  width: 0;
-  height: 0;
-}
-.footer {
-  background-color: brown;
-  grid-area: footer;
-}
-
-footer {
-  padding: 50px;
-  position: relative;
-  display: block;
-  justify-content: center;
-  background-color: #000;
-  color: #fff;
-  font-size: 12px;
-}
-
-footer .menu-list ul {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-footer .menu-list ul li {
-  position: relative;
-  list-style: none;
-  font-size: 12px;
-  margin: 0 15px;
-  padding-left: 15px;
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 1px;
-  height: 15px;
-
-}
-footer .menu-list ul li .list-item-group {
-  position: relative;
-  margin: 0 15px;
-  padding-left: 15px;
-  text-decoration: none;
-  color: #fff;
-  letter-spacing: 1px;
-  height: 15px;
-}
-
 .main {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   background-color: #eee;
   padding-bottom: 2px;
 }
-
-.user-side-bar {
-  height: 300px;
-  margin: 20px 10px 10px 10px;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  text-align: center;
-  padding-top: 20px;
-  color: #000;
-  overflow: hidden;
-  z-index: 10px;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-}
-.user-side-bar img {
-  border-radius: 100px;
-  width: 200px;
-  height: 200px;
-}
-
 .posts-list {
   margin : 20px 10px 50px 10px;
   justify-content: center;
   align-items: center;
   color: #000;
 }
-
 .posts-list .card {
   display: grid;
   grid-template-columns: 1fr;
@@ -201,7 +28,6 @@ footer .menu-list ul li .list-item-group {
   padding: 20px;
   padding-bottom: 20px;
 }
-
 .posts-list .card .card-head h1{
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -227,389 +53,11 @@ footer .menu-list ul li .list-item-group {
   transition: 0.6s;
   
 }
-
 .posts-list .card .card-footer {
   margin-left: 15px;
   width: 95%;
   height: 50px;
   border: 1px solid #eee;
-}
-.devs-side-bar {
-  margin : 20px 10px 50px 10px;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  text-align: center;
-  color: #000;
-  padding-top: 10px;
-}
-
-.devs-side-bar .developer-card {
-  margin: 20px auto;
-  width: 70%;
-  height: 150px;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  border-radius: 10%;
-  padding-top: 10px;
-}
-
-.devs-side-bar .developer-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  margin-bottom: 10px;
-}
-.devs-side-bar .developer-card h5 {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 12px;
-}
-.devs-side-bar .developer-card h6 {
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 10px;
-  margin-top: 4px;
-}
-.new-post-container {
-  background: #eee;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: auto;
-}
-.new-post-container h3 {
-  margin: 10px auto;
-  font-size: 24px;
-  font-weight: 500;
-  height: 100%;
-}
-.new-post-section {
-  margin: 1px auto;
-  width: 82%;
-  background-color: #fff;
-  padding: 10px;
-  /* box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7); */
-}
-.new-post-section .input-group {
-  margin: 10px 100px 10px 40px;
-}
-.new-post-section span {
-  margin: 20px 50px 5px 30px;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 2px;
-}
-.new-post-section input {
-  width: 60%;
-  border: none;
-  border-bottom: 1px solid #000;
-  outline: none;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 10px;
-}
-.new-post-section .input-title {
-  font-size: 24px;
-}
-.new-post-section .input-group-content {
-  margin-top: 20px;
-}
-.content-container {
-  margin: 10px auto;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  width: 80%;
-  padding: 20px;
-  background-color: #fff;
-  /* box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7); */
-}
-.content-container .editor {
-  height: 500px;
-}
-.new-post-section textarea {
-  width: 80%;
-  outline: none;
-  height: 100px;
-  margin : 10px 100px;
-  font-size: 16px;
-  font-weight: 200px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 10px;
-}
-.new-post-section-button {
-  margin: 50px 360px ;
-  width: 300px;
-  height: 40px;
-  border-radius: 3px;
-  font-size: 18px;
-  font-weight: 800;
-  transition: 0.6s;
-  border: none;
-}
-.new-post-section-button:hover {
-  width: 320px;
-  height: 45px;
-  background-color: #000;
-  color: white;
-}
-.image-uploaded {
-  width: 60%;
-  height: 30%;
-  margin: auto;
-  margin-top: 20px;
-}
-.image-uploaded img {
-  width: 100%;
-  height: 100%;
-  box-shadow: 7px 7px 10px 0 rgb(0, 0, 0,.7);
-}
-.dev-page-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 40px 10px 40px 20px;
-    background-color: #eee;
-}
-.dev-page-container .dev-card {
-  width: 80%;
-  margin-bottom: 30px;
-  height: 420px;
-  background-color: #fff;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  transition: 0.6s;
-  cursor: pointer;
-}
-.dev-page-container .dev-card:hover{
-  margin: 10px 20px;
-  width: 90%;
-  height: 450px;
-  background-color: #eee;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  z-index: 100px;
-}
-.dev-page-container .dev-card img {
-  width: 100%;
-  height: 250px;
-}
-.dev-page-container .dev-card-body {
-  padding: 10px;
-}
-.dev-page-container .dev-card-body h4 {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-.dev-page-container .dev-card-body h5 {
-  letter-spacing: 1px;
-  margin-bottom: 5px;
-  font-weight: 500;
-}
-.dev-page-container .dev-card-body p {
-  letter-spacing: 1px;
-  margin-top : 15px;
-  font-weight: 300;
-  font-size: 12px;
-}
-.posts-page-container {
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  background-color: #eee;
-  text-align: center;
-  padding-top: 20px;
-}
-.posts-page-container .post-card {
-  margin: auto;
-  width: 50%;
-  background-color: #fff;
-  margin-bottom: 120px;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  padding-top: 50px;
-}
-.posts-list .card .card-head{
-  padding: 20px;
-  padding-bottom: 20px;
-}
-
-.post-card-head h1{
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 500;
-  margin: 25px 100px 5px 100px;
-}
-.post-card-head span {
-  font-weight: 100;
-  font-size : 10px;
-}
-.post-card-head p {
-  margin: 25px 10px 15px 10px;
-  font-size : 16px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.post-card-img {
-  height: 300px;
-  padding: 10px;
-}
-.post-card-img img {
-  width: 100%;
-  height: 300px;
-  cursor: pointer;
-  transition: 0.6s;
-}
-.post-description {
-  margin: 10px 5px;
-  box-shadow: 5px 5px 30px 0 rgb(0, 0, 0,.7);
-  padding: 10px;
-  font-size: 14px;
-}
-.btn-description {
-  width: 150px;
-  height: 30px;
-  color: #000;
-  background-color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-  border: 1px solid black;
-  margin-top: 20px;
-  transition: 0.6s;
-  cursor: pointer;
-}
-
-.about-page-container {
-  margin: auto;
-  background-color: #eee;
-  height: 90vh;
-  text-align: center;
-  padding: 50px;
-}
-.dev-zone-about {
-  margin: auto;
-  background: #fff;
-  box-shadow: 5px 5px 30px 0 rgb(0, 0, 0,.7);
-  padding-top: 15px;
-  height: 240px;
-  margin-bottom: 50px;
-}
-.dev-zone-about h1 {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 800;
-  margin: 50px 100px 20px 100px;
-}
-.dev-zone-about p { 
-  letter-spacing: 1px;
-  margin : 15px 100px 0px 100px;
-  font-weight: 500;
-  font-size: 14px;
-}
-.dev-zone-card {
-  margin: auto;
-  width: 200px;
-  height: 190px;
-  align-items: center;
-  background-color: #fff;
-  color: #000;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  border-radius: 100%;
-  font-size: 10px;
-}
-.about-page-container h3 {
-  margin: 10px auto;
-  font-size: 24px;
-  font-weight: 500;
-}
-.dev-zone-card img{
-  margin: 20px 50px 5px 50px;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-}
-.dev-zone-text {
-  width: 400px;
-  margin-left: -100px ;
-  margin-top: 80px;
-  border-radius: 20px;
-  box-shadow: 6px 6px 40px 0 rgb(0, 0, 0,.6);
-  padding: 5px;
-  font-size: 10px;
-  font-weight: 800;
-  margin-bottom: 300px;
-}
-
-.btn-section {
-  margin: auto;
-  margin-top: 50px;
-  height: 50px;
-  width: 500px;
-  padding-top: 10px;
-}
-.btn-section button {
-  width: 150px;
-  height: 30px;
-  color: #000;
-  background-color: #fff;
-  font-size: 12px;
-  font-weight: 800;
-  border: 1px solid black;
-  transition: 0.6s;
-  cursor: pointer;
-  margin-left: 20px;
-  transition: 0.6s;
-}
-.btn-section button:hover {
-  background-color: #000;
-  color: white;
-  box-shadow: 2px 2px 2px 8px rgb(0, 0, 0,.6);
-}
-
-.profile-container {
-  margin: 20px 180px;
-}
-.profile-container .user-details {
-  display: flex;
-  height: 80vh;
-  background: #eee;
-  border: 1px solid black;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-}
-.profile-container .user {
-  background-color: #fff;
-  width: 100%;
-  padding: 20px 20px 20px;
-  text-align: center;
-  border: 1px solid #000;
-}
-.profile-container .user img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-  margin-bottom: 10px;
-}
-.profile-container .user ul {
-  margin-top: 20px;
-  text-align: start;
-  padding-left: 3px;
-}
-.profile-container .user h3 {
-  font-size: 18px;
-  font-weight: 500;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.profile-container .user li {
-  list-style: none;
-  margin: 5px 20px 1px 0;
-}
-.profile-container .user li span {
-  margin: 0 5px 0 10px;
-}
-
-.profile-container .info {
-  background: #fff;
-  padding: 40px;
-  border: 1px solid #000;
-}
-
-.profile-container .info div {
-  background: #fff;
-  margin-bottom: 30px;
 }
 .info {
   margin: 10px 100px 10px 40px;
@@ -634,68 +82,11 @@ footer .menu-list ul li .list-item-group {
   font-weight: 500;
   letter-spacing: 2px;
 }
-
 .text-area-bio {
   font-family: Georgia, 'Times New Roman', Times, serif;
   padding: 10px;
   
 }
-
-.login-container {
-  background: #eee;
-  height: 100vh;
-  padding-left: 28%;
-  padding-top: 5%;
-}
-
-.login-box {
-  background: #fff;
-  width: 500px;
-  padding-left: 15px;
-  padding-top: 10px;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-}
-
-.login-box .input-group {
-  margin-top: 5px;
-  padding-left: 50px;
-  align-items: center;
-  padding-top: 10px;
-}
-.login-box  span {
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-right: 30px;
-}
-.login-box  input {
-  width: 50%;
-  border: none;
-  border-bottom: 1px solid #000;
-  outline: none;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 7px;
-  margin-left: 15px;
-}
-
-.login-btn {
-  width: 100%;
-  text-align: center;
-}
-.login-box .go-to-sign-up {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  padding-left: 130px;
-  margin: 10px 5px 20px;
-}
-.login-box h3 {
-  margin-left: 140px;
-  font-size: 24px;
-  font-weight: 500;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 .post-card-footer {
   display: flex;
   justify-content: space-around;
@@ -786,24 +177,6 @@ footer .menu-list ul li .list-item-group {
   border-radius: 25px;
   margin-left: 10px;
 }
-.view-all-posts {
-  margin: 15px 180px;
-  display: flex;
-  text-align: center;
-  padding: 10px;
-}
-.view-all-posts h4 {
-  margin-right: 10px;
-}
-.view-all-posts:hover {
-  width: 200px;
-  height: 15px;
-  background: #eee;
-  display: flex;
-  text-align: center;
-  box-shadow: 5px 5px 9px 0 rgb(0, 0, 0,.7);
-  border-radius: 20px;
-}
 .card-feedback {
   position: fixed;
     width: 320px;
@@ -850,8 +223,6 @@ footer .menu-list ul li .list-item-group {
   color: #000;
   letter-spacing: 1px;
   font-size: 1.1rem;
-
-
 }
 .overlay{
   position: fixed;
@@ -861,44 +232,6 @@ footer .menu-list ul li .list-item-group {
   bottom: 0;
   background-color: rgb(0, 0, 0,.8);
   z-index: 1000;
-}
-.side-bar-menu {
-  position : fixed;
-  width: 200px;
-  height : 100vh;
-  background :#000;
-  padding : 50px;
-  z-index : 1000;
-  transition: 0.6s; 
-  color: #000;
-  background: #fff;
-}
-.side-bar-menu  ul {
-  list-style: none;
-  padding-top: 10px;
-}
-.side-bar-menu  ul li {
-  list-style: none;
-  margin-top: 30px;
-  color: #000;
-  font-size: 22px;
-}
-.side-bar-menu  ul li .list-item-group {
-  text-decoration: none;
-  color: #000;
-}
-.list-item-group span {
-  margin-left: 18px;
-}
-.side-bar-menu button {
-  width: 80%;
-  height: 50px;
-  font-size: 22px;
-  color: #fff;
-  font-weight: 800;
-  border: 1px solid #000;
-  background: #000;
-  margin-top: 50px;
 }
 .sk-cube-grid {
   width: 60px;
@@ -965,142 +298,14 @@ footer .menu-list ul li .list-item-group {
   and (min-device-width: 120px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-  nav {
-    background-color: #000;
-    display: flex;
-    justify-content: space-between;
-    height: 140px;
-    align-items: center;
-  }
-  nav .logo {
-    position: relative;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    font-size: 3em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
  
-  nav .hamburger-icon-section {
-    margin-right: 100px;
-    margin-bottom: 75px;
-  }
-
-  nav .hamburger-icon-section  img {
-    width: 70px;
-    height: 70px;
-    background-color: #000;
-    border-radius: 100%;
-  }
-  nav ul {
-    display: none;
-  }
-  nav .menu-section {
-    display: none;
-  }
-  nav .account-section {
-    display: none;
-  }
-  .side-bar-menu {
-    position : fixed;
-    width: 800px;
-    height : 2700px;
-    transform : translate(60%, 0%);
-  }
-  .side-bar-menu  ul {
-    list-style: none;
-    padding-top: 20px;
-  }
-  .side-bar-menu  ul li {
-    list-style: none;
-    margin-top: 70px;
-    color: #000;
-    font-size: 32px;
-  }
-  .side-bar-menu  ul li .list-item-group {
-    text-decoration: none;
-    color: #000;
-  }
-  .list-item-group span {
-    margin-left: 18px;
-  }
-  .side-bar-menu button {
-    width: 40%;
-    height: 80px;
-    font-size: 32px;
-    color: #fff;
-    font-weight: 800;
-    border: 1px solid #000;
-    background: #000;
-    margin-top: 50px;
-  }
   .main {
     display: grid;
     grid-template-columns: 1fr;
   }
-  .user-side-bar {
-    height: 200px;
-    background-color: #000;
-    color: #fff;
-  }
-  .user-side-bar img {
-    width: 100px;
-    height: 100px;
-    border: 1px solid #fff;
-  }
-  .devs-side-bar {
-    background-color: #000;
-    text-align: center;
-    color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  .devs-side-bar-content {
-    display: flex;
-  }
-  .devs-side-bar .developer-card {
-    margin: 5px;
-    height: 150px;
-    padding-top: 10px;
-    color: #000;
-    background: #fff;
-  }
-  .new-post-container {
-    height: 80vh;
-  }
-  .new-post-container h3 {
-    margin: 40px auto 0;
-    font-size: 32px;
-    font-weight: 800;
-    height: 40px;
-  }
-  .new-post-section {
-    margin: -180px auto 100px;
-    width: 75%;
-    padding: 5px;
-  }
-  .content-container {
-    margin: 10px auto;
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    width: 90%;
-    padding: 20px;
-    background-color: #fff;
-    /* box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7); */
-  }
-  .dev-page-container {
-    grid-template-columns: 1fr;
-    background-color: #fff;
-  }
-  .dev-page-container .dev-card {
-    margin: 30px auto;
-    width: 60%;
-  }
   .posts-page-container {
     padding-top: 50px;
     height: 120%;
-    
   }
   .posts-page-container .post-card {
     width: 75%;
@@ -1108,52 +313,12 @@ footer .menu-list ul li .list-item-group {
     height: 100%;
     margin-top: 20px;
     border-bottom: 2px solid #000;
-    
   }
   .post-card-head p {
     font-size : 30px;
   }
   .post-card-img {
     height: 400px;
-  }
-  .about-page-container {
-    height: 100vh;
-  }
-  .dev-zone-about {
-    padding-top: 15px;
-    height: 50%;
-  }
-  .dev-zone-about p { 
-    margin : 85px 100px 0px 100px;
-    font-size: 30px;
-  }
-  .dev-zone-card {
-    width: 500px;
-    height: 490px;
-    font-size: 18px;
-    color: #fff;
-  }
-  .about-page-container h3 {
-    margin: 20px auto;
-    font-size: 40px;
-    font-weight: 800;
-  }
-  .dev-zone-card img{
-    margin: 30px 30px 10px 65px;
-    width: 300px;
-    height: 300px;
-  }
-  .dev-zone-text {
-    width: 650px;
-    color: #000;
-    margin-left: -50px ;
-    margin-top: 180px;
-    padding: 5px;
-    font-size: 22px;
-    font-weight: 500;
-  }
-  .profile-container {
-    margin: 20px 10px;
   }
   .info span {
     margin: 20px 50px 5px 30px;
@@ -1165,85 +330,13 @@ footer .menu-list ul li .list-item-group {
   .info p {
     font-size: 22px;
   }
-  .login-container {
-    background: #eee;
-    height: 100vh;
-    padding-left: 200px;
-    padding-top: 30%;
-  }
-  .login-box {
-    background: #fff;
-    width: 600px;
-    height: 900px;
-    padding-left: 30px;
-    padding-top: 200px;
-    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  }
-  .login-box  span {
-    font-size: 28px;
-    font-weight: 800;
-  }
-  .login-box  input {
-    font-size: 28px;
-  }
-  .login-box .go-to-sign-up {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    padding-left: 130px;
-    margin: 10px 5px 20px;
-  }
-  .new-post-section button {
-    border: 1px solid #000;
-  }
 }
 
 @media only screen 
   and (min-device-width: 481px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
     .main {
       grid-template-columns: 1fr 2fr;
-    }
-    .devs-side-bar {
-      position: absolute;
-      text-align: center;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      margin-top: 450px;
-      width: 300px;
-    }
-    .dev-page-container {
-      grid-template-columns: 1fr 1fr;
-    }
-    .dev-page-container .dev-card {
-      margin: 30px auto;
-      width: 80%;
-    }
-    .profile-container {
-      margin: 20px 10px;
-    }
-    .login-container {
-      background: #eee;
-      height: 100vh;
-      padding-left: 280px;
-    }
-    .login-box {
-      background: #fff;
-      width: 500px;
-      padding-left: 30px;
-      padding-top: 80px;
-    }
-    .new-post-section span {
-      margin: 20px 20px 5px 30px;
-      font-size: 18px;
-    }
-    .new-post-section input {
-      width: 50%;
-    }
-    .new-post-section button {
-      margin: 60px 200px 50px 120px ;
-      border: 1px solid #000;
     }
   }

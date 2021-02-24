@@ -1,0 +1,9 @@
+.latest-stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+}
+.latest-stories-side {
+    margin-left: 100px;
+    margin-top: 10px;
+}

@@ -1,0 +1,39 @@
+footer {
+    padding: 50px;
+    position: relative;
+    display: block;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  footer .menu-list ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  footer .menu-list ul li {
+    position: relative;
+    list-style: none;
+    font-size: 12px;
+    margin: 0 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    height: 15px;
+  
+  }
+  footer .menu-list ul li .list-item-group {
+    position: relative;
+    margin: 0 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    height: 15px;
+  }

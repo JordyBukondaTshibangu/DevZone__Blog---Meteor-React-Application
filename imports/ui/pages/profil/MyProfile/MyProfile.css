@@ -1,0 +1,69 @@
+.profile-container {
+    margin: 20px 140px;
+  }
+  .profile-container .user-details {
+    display: flex;
+    background: #eee;
+    border: 1px solid black;
+    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+  }
+  .profile-container .user {
+    background-color: #fff;
+    width: 100%;
+    padding: 20px 20px 20px;
+    text-align: center;
+    border: 1px solid #000;
+  }
+  .profile-container .user img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+  .profile-container .user h3 {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+  }
+  .profile-container .user ul {
+    margin-top: 20px;
+    text-align: start;
+    padding-left: 20px;
+  }
+  .profile-container .user li {
+    list-style: none;
+    margin: 5px 20px 1px 0;
+  }
+  .profile-container .user li span {
+    margin: 0 5px 0 10px;
+  }
+  
+  .profile-container .info {
+    background: #fff;
+    padding: 40px;
+    border: 1px solid #000;
+  }
+  
+  .profile-container .info div {
+    background: #fff;
+    margin-bottom: 30px;
+  }
+
+@media only screen 
+and (min-device-width: 120px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+.profile-container {
+    margin: 20px 10px;
+    }
+}
+@media only screen 
+and (min-device-width: 481px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+    .profile-container {
+        margin: 20px 10px;
+      }
+}

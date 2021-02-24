@@ -1,0 +1,13 @@
+.home-page-container {
+    margin: 20px 50px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 1.3fr 1.5fr 0.6fr;
+}
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    margin: 10px 15px;
+    font-weight: 500;
+}
