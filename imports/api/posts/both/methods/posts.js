@@ -1,9 +1,9 @@
 import {PostsCollection} from "/imports/db/posts/collection";
 
 Meteor.methods({
-    'post.create'({ title, tagline, description, image, author, email, content}){
+    'post.create'({ title, category, tagline, description, image, author, email, content}){
 
-        if (!title || !tagline || !description || !author || !email || !content) return
+        if (!title || !category || !tagline || !description || !author || !email || !content) return
 
         return PostsCollection.insert({
             title,

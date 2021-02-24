@@ -6,7 +6,8 @@ import LoadingSpinner from '../../feedback/LoadingSpinner';
 import DevProfile from '../../components/devProfile/DevProfile.jsx'
 import './DevelopersPage.css';
 
-const DevelopersPage = ({posts}) => {
+const DevelopersPage = ({developers}) => {
+
     const [ showProfile, setShowProfile ] = useState(false);
 
     const closeProfileModal = () => { setShowProfile(false)}
@@ -14,10 +15,10 @@ const DevelopersPage = ({posts}) => {
     return (
         <div className="dev-page-container">
             {
-                posts.length === 0 ? <LoadingSpinner /> : 
-                posts.map((dev,index) => {
+                developers.length === 0 ? <LoadingSpinner /> : 
+                developers.map((devProfile,index) => {
 
-                    const { fullName, avatar, email } = dev
+                    const { fullName, avatar, email } = devProfile
 
                     return (
                         <div key={index} className="dev-card">
@@ -34,7 +35,7 @@ const DevelopersPage = ({posts}) => {
                             </div>
                             {
                                 showProfile && 
-                                ReactDOM.createPortal(<DevProfile dev={dev} closeProfileModal={closeProfileModal}/>, document.getElementById('react-user-profile'))
+                                ReactDOM.createPortal(<DevProfile devProfile={devProfile} closeProfileModal={closeProfileModal}/>, document.getElementById('react-user-profile'))
 
                             }
                         </div>)
@@ -47,6 +48,6 @@ const DevelopersPage = ({posts}) => {
 export default withTracker(() => {
     Meteor.subscribe('developers');
 
-    return { posts : DevelopersCollection.find({}).fetch()};
+    return { developers : DevelopersCollection.find({}).fetch()};
 
 })(DevelopersPage)

@@ -1,9 +1,9 @@
 import React from 'react';
 import './DevProfile.css'
 
-const DevProfile = ({dev, closeProfileModal}) => {
+const DevProfile = ({devProfile, closeProfileModal}) => {
 
-    const { fullName, avatar, email, myBio } = dev
+    const { fullName, avatar, email, myBio } = devProfile
 
     return (
         <div className="overlay" onClick={closeProfileModal}>

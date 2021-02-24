@@ -38,7 +38,8 @@ const routes = (
         <Route path="/sign-in" exact component={LoginPage} />
         <Route path="/sign-up" exact component={SignUp} />
       </Switch>
-      <App />
+      <App /> 
+      {/* Find a better way to handle the App and the Footer component */}
       <Switch>
         <ProtectedRoute path="/" exact component={HomePage} />
 

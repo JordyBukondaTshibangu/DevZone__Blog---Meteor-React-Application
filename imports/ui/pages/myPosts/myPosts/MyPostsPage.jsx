@@ -6,22 +6,18 @@ import MyPosts from '../../../containers/myPosts/MyPosts.jsx'
 import PostsSideBar from '../../../components/myPostsSideBar/PostsSideBar.jsx';
 import './MyPostsPage.css'
 
-
-let email = "jordytshibss@test.com"
-
-
 const PostsPage = ({dev, posts}) => {
 
     const devObj = dev
-    
-    if(!devObj){
-        useHistory().push('/sign-in');
-    } 
 
+    const myPosts = posts.filter(post => post.email == dev.email)
+
+    if(!devObj) useHistory().push('/sign-in');
+    
     return (
         <div className="posts-page-container">
            <div className="posts-list">
-              <MyPosts posts={posts} />
+              <MyPosts posts={myPosts} />
            </div>
            <div className="post-sidebar">
                <PostsSideBar />
@@ -33,6 +29,6 @@ const PostsPage = ({dev, posts}) => {
 export default withTracker(() => {
     Meteor.subscribe('posts');
 
-    return { posts : PostsCollection.find({email}).fetch()};
+    return { posts : PostsCollection.find().fetch()};
 
 })(PostsPage)

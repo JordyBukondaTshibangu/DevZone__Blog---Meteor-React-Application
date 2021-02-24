@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link  } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild, FaUser, FaCog } from 'react-icons/fa';
+import './SideBarMenu.css';
 
 const SideBarMenu = props => {
 

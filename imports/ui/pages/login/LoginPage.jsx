@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import './LoginPage.css';
 
 const LoginPage = () => {
 
@@ -14,12 +15,9 @@ const LoginPage = () => {
         evt.preventDefault();
 
         const dev = { email, password }
+
         Meteor.call('dev.login', dev, (error, res) => {
-            if(error) {
-                setError("There was an error ")
-                
-                return ;
-            }
+            if(error)  setError("There was an error ")
             
             localStorage.setItem('dev', JSON.stringify(res))
             history.push('/')
@@ -34,12 +32,10 @@ const LoginPage = () => {
                 { error }
                 <form onSubmit={handleLogin}>
                     <div className="input-group">
-                        <span> Email</span>
-                        <input type="email" value={email} onChange={e => setEmail(e.target.value)} required/>
+                        <input type="email" placeholder="Email address" value={email} onChange={e => setEmail(e.target.value)} required/>
                     </div>
                     <div className="input-group">
-                        <span> Password</span>
-                        <input type="password" value={password} onChange={e => setPassword(e.target.value)} required/>
+                        <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required/>
                     </div>
                     <div className="btn-section login-btn">
                         <button>Sign In </button>

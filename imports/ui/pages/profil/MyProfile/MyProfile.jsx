@@ -3,9 +3,6 @@ import { Link, useHistory  } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 import './MyProfile.css';
 
-let email = "jordytshibss@test.com";
-
-
 const MyProfile = props => {
 
     const dev = props.dev;
@@ -13,7 +10,7 @@ const MyProfile = props => {
 
     if(!dev) useHistory().push('/sign-in');
     
-    const { fullName, dateOfBirth, myBio, avatar } = dev
+    const { fullName, dateOfBirth, myBio, avatar, email } = dev
     
     const [ error, setError ] = useState("");
     

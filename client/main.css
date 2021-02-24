@@ -87,59 +87,6 @@
   padding: 10px;
   
 }
-.login-container {
-  background: #eee;
-  height: 100vh;
-  padding-left: 28%;
-  padding-top: 5%;
-}
-.login-box {
-  background: #fff;
-  width: 500px;
-  padding-left: 15px;
-  padding-top: 10px;
-  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-}
-
-.login-box .input-group {
-  margin-top: 5px;
-  padding-left: 50px;
-  align-items: center;
-  padding-top: 10px;
-}
-.login-box  span {
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-right: 30px;
-}
-.login-box  input {
-  width: 50%;
-  border: none;
-  border-bottom: 1px solid #000;
-  outline: none;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 7px;
-  margin-left: 15px;
-}
-.login-btn {
-  width: 100%;
-  text-align: center;
-}
-.login-box .go-to-sign-up {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  padding-left: 130px;
-  margin: 10px 5px 20px;
-}
-.login-box h3 {
-  margin-left: 140px;
-  font-size: 24px;
-  font-weight: 500;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 .post-card-footer {
   display: flex;
   justify-content: space-around;
@@ -359,7 +306,6 @@
   .posts-page-container {
     padding-top: 50px;
     height: 120%;
-    
   }
   .posts-page-container .post-card {
     width: 75%;
@@ -367,7 +313,6 @@
     height: 100%;
     margin-top: 20px;
     border-bottom: 2px solid #000;
-    
   }
   .post-card-head p {
     font-size : 30px;
@@ -385,54 +330,13 @@
   .info p {
     font-size: 22px;
   }
-  .login-container {
-    background: #eee;
-    height: 100vh;
-    padding-left: 200px;
-    padding-top: 30%;
-  }
-  .login-box {
-    background: #fff;
-    width: 600px;
-    height: 900px;
-    padding-left: 30px;
-    padding-top: 200px;
-    box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
-  }
-  .login-box  span {
-    font-size: 28px;
-    font-weight: 800;
-  }
-  .login-box  input {
-    font-size: 28px;
-  }
-  .login-box .go-to-sign-up {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 2px;
-    padding-left: 130px;
-    margin: 10px 5px 20px;
-  }
-
 }
 
 @media only screen 
   and (min-device-width: 481px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
     .main {
       grid-template-columns: 1fr 2fr;
-    }
-    .login-container {
-      background: #eee;
-      height: 100vh;
-      padding-left: 280px;
-    }
-    .login-box {
-      background: #fff;
-      width: 500px;
-      padding-left: 30px;
-      padding-top: 80px;
     }
   }

@@ -29,9 +29,12 @@ const NewPostPage = props => {
         const email = props.dev.email;
         const author = props.dev.fullName;
         const post = { title, category, tagline, description, image, author, email, content };
-
+    
         Meteor.call('post.create', post, (error) => {
-            if (error)  setError(true);
+            if (error) {
+                setError(true);
+                return 
+            }
 
             setSuccess(true);
             setTimeout(() => {
