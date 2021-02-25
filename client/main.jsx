@@ -18,7 +18,7 @@ import HomePage from '../imports/ui/pages/home/HomePage.jsx';
 import SinglePost from '../imports/ui/pages/posts/SinglePost/SinglePostPage.jsx';
 import PostsPage from '../imports/ui/pages/posts/AllPost/AllPostsPage.jsx';
 import MyPosts from '../imports/ui/pages/myPosts/myPosts/MyPostsPage.jsx';
-import UpdatePost from '../imports/ui/pages/myPosts/updatePost/UpdatePost.jsx'
+import UpdatePost from '../imports/ui/pages/myPosts/updatePost/UpdatePost'
 import NewPostPage from '../imports/ui/pages/myPosts/newPost/NewPostPage.jsx';
 
 import UpdateProfil from '../imports/ui/pages/profil/updateProfile/UpdateProfile.jsx';
