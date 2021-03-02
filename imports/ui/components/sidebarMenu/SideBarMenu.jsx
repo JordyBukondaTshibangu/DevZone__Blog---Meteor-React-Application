@@ -9,7 +9,7 @@ const SideBarMenu = props => {
         <div className="overlay" onClick={props.closeSideMenu}>
             <div className="side-bar-menu">
                 <ul>
-                    <li><Link to="/" className="list-item-group"><FaHome/><span>Home</span></Link></li>
+                    <li><Link to="/home" className="list-item-group"><FaHome/><span>Home</span></Link></li>
                     <li><Link to="/new-post" className="list-item-group"><FaPlusSquare/><span>New Post</span></Link></li>
                     <li><Link to="/devs" className="list-item-group"><FaUsers/><span>DevsZoners</span></Link></li>
                     <li><Link to="/posts" className="list-item-group"><FaBook/><span>Posts</span></Link></li>

@@ -23,6 +23,8 @@ const PostsPage = ({ posts }) => {
 
         const postsResults = allPosts.filter(post => post.title.toLowerCase().includes(search.toLowerCase()));
         setAllPosts(postsResults)
+        console.log(postsResults);
+        console.log(allPosts, "All Posts");
     }
     return (
        <div className="posts-container">
