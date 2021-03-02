@@ -11,27 +11,22 @@ import './AllPostPage.css';
 const PostsPage = ({ posts }) => {
 
     const [ search, setSearch ] = useState('');
+    const [ category, setCategory ] = useState('');
     const [ allPosts, setAllPosts ] = useState([]);
 
     useEffect(() => {
-        setAllPosts(posts)
+        setAllPosts(posts);
     })
 
-    const handleSearch = event => {
-
-        setSearch(event.target.value);
-
-        const postsResults = allPosts.filter(post => post.title.toLowerCase().includes(search.toLowerCase()));
-        setAllPosts(postsResults)
-        console.log(postsResults);
-        console.log(allPosts, "All Posts");
+    const filterPostByCategory = category => {
+        setCategory(category)
     }
     return (
        <div className="posts-container">
             <div className="posts-container-header">
                 <h3> All posts and Features content  </h3>
                 <div className="search-bar">
-                    <input type="text" placeholder="Search Post" value={search} onChange={event => handleSearch(event)}/>
+                    <input type="text" placeholder="Search Post" value={search} onChange={event => setSearch(event.target.value)}/>
                     <div className="fa-icon-search">
                         <FaSearch />
                     </div>
@@ -39,11 +34,11 @@ const PostsPage = ({ posts }) => {
             </div>
             <div className="posts-content">
                 <div>
-                    <CategorySideBar />
+                    <CategorySideBar filterPostByCategory={(category) => filterPostByCategory(category)}/>
                 </div>
                 <div>
                     {
-                        allPosts.length < 1 ? <LoadingSpinner /> : <AllPosts posts={allPosts}/>
+                        allPosts.length < 1 ? <LoadingSpinner /> : <AllPosts posts={allPosts} search={search} category={category}/>
                     }
                 </div>
             </div>
