@@ -23,11 +23,11 @@ const NavBar = props => {
     return (
         <nav>
             <div className="logo-section">
-                <Link to="/" className="logo">DevZone</Link>
+                <Link to="/home" className="logo">DevZone</Link>
             </div> 
             <div className="menu-section">
                 <ul>
-                    <li><Link className="list-item-group" to="/"><FaHome/><span>Home</span></Link></li>
+                    <li><Link className="list-item-group" to="/home"><FaHome/><span>Home</span></Link></li>
                     <li><Link className="list-item-group" to="/new-post"><FaPlusSquare/><span>New Post</span></Link></li>
                     <li><Link className="list-item-group" to="/devs"><FaUsers/><span>DevsZoners</span></Link></li>
                     <li><Link className="list-item-group" to="/posts"><FaBook/><span>Posts</span></Link></li>
@@ -43,9 +43,9 @@ const NavBar = props => {
                 {
                     dev.avatar  ? 
 
-                    <img src={dev.avatar} alt={avatarAlt} onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}}/>
+                    <img src={dev.avatar} alt={avatarAlt} onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px', pointer : 'cursor'}}/>
                     :
-                    <img src={avatarAlt} alt="" onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}} />
+                    <img src={avatarAlt} alt="" onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px', pointer : 'cursor'}} />
                 }
                 
                 {

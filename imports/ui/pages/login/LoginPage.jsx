@@ -20,7 +20,7 @@ const LoginPage = () => {
             if(error)  setError("There was an error ")
             
             localStorage.setItem('dev', JSON.stringify(res))
-            history.push('/')
+            history.push('/home')
         })
         
     }

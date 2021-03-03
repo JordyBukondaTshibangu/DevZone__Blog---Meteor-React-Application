@@ -9,9 +9,10 @@ const LatestStories = ({posts}) => {
     
     let history = useHistory();
     const length = posts.length
-    const latestStory = posts[length - 2];
-    const latestStorySide = [posts[length-5], posts[length-3], posts[length - 4]];
-
+    const latestStory = posts[length - 1];
+    
+    const latestStorySide = [posts[length-2], posts[length-3], posts[length - 4]];
+    
     const handleViewPost = (_id) => {
         history.push(`/posts/${_id}`)
     }

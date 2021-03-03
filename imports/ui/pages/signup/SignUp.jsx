@@ -51,7 +51,7 @@ const SignUp = () => {
             setSuccess(true);
             Meteor.call('sendEmail', email, error => {
                 localStorage.setItem('dev', JSON.stringify(newDev))
-                history.push('/');
+                history.push('/home');
 
                 if(error) {
                     return;
