@@ -43,9 +43,9 @@ const NavBar = props => {
                 {
                     dev.avatar  ? 
 
-                    <img src={dev.avatar} alt={avatarAlt} onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}}/>
+                    <img src={dev.avatar} alt={avatarAlt} onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px', pointer : 'cursor'}}/>
                     :
-                    <img src={avatarAlt} alt="" onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px'}} />
+                    <img src={avatarAlt} alt="" onClick={() => setShowModal(!showModal)} width="50" height="50" style={{borderRadius : '50px', pointer : 'cursor'}} />
                 }
                 
                 {
