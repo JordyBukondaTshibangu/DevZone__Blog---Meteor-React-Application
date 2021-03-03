@@ -9,11 +9,11 @@ const SinglePost = props => {
     const [error, setError] = useState("");
     const [ showDescription, setShowDescription ] = useState(false);
 
-    const {_id, title, tagline, description, image, author, content, createdAt } = props.post
+    const {_id, title, tagline, description, image, author, content, createdAt, category } = props.post
 
     const propsObj = {
         pathname : `/update-post/${_id}`,
-        state : { _id, title, tagline, description, image,  content }
+        state : { _id, title, tagline, description, image, category, content }
     }
 
     const date = (createdAt) => {

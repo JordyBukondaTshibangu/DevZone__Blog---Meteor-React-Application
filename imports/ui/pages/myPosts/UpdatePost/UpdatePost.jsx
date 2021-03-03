@@ -13,6 +13,8 @@ const UpdatePost = props => {
     const post = props.propsData.location.state;
     const { _id, title, tagline, description, image,  content, category } = post
 
+    console.log(category);
+
     const [ updatedTitle, setTitle ] = useState(title);
     const [ updatedCategory, setCategory ] = useState(category);
     const [ updatedTagline, setTagline ] = useState(tagline);
@@ -31,7 +33,7 @@ const UpdatePost = props => {
 
         evt.preventDefault();
         
-        const updatedPost = { _id, updatedTitle,updatedTagline, updatedDescription, updatedImage, updatedContent }
+        const updatedPost = { _id, updatedTitle, updatedCategory, updatedTagline, updatedDescription, updatedImage, updatedContent }
 
         Meteor.call('post.update', updatedPost , error => {
             if(error) {
@@ -41,7 +43,7 @@ const UpdatePost = props => {
 
             setSuccess(true);
             setTimeout(()=> {
-                history.push('/');
+                history.push('/home');
             },3000)
         })
         

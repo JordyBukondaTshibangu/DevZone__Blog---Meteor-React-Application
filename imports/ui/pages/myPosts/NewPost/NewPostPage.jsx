@@ -38,7 +38,7 @@ const NewPostPage = props => {
 
             setSuccess(true);
             setTimeout(() => {
-                history.push('/');
+                history.push('/home');
             }, 3000)
         })
     }
