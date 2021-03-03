@@ -31,10 +31,7 @@ const NewPostPage = props => {
         const post = { title, category, tagline, description, image, author, email, content };
     
         Meteor.call('post.create', post, (error) => {
-            if (error) {
-                setError(true);
-                return 
-            }
+            if (error)  setError(true) 
 
             setSuccess(true);
             setTimeout(() => {
@@ -73,7 +70,7 @@ const NewPostPage = props => {
                             </select>
                         </div> 
                         <div className="input-group">
-                            <input type="text" placeholder="Add a description of less than 100 words" value={tagline} onChange={e => setTagline(e.target.value)}required/>
+                            <input type="text" placeholder="Add a tagline of less than 100 words" value={tagline} onChange={e => setTagline(e.target.value)}required/>
                         </div>
                         <div className="input-group">
                             <input type="text" placeholder="image url" value={image} onChange={ e => setImage(e.target.value)}/>
