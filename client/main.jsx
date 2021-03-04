@@ -35,7 +35,7 @@ const routes = (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/sign-in" exact component={LoginPage} />
+        <Route path="/" exact component={LoginPage} />
         <Route path="/sign-up" exact component={SignUp} />
       </Switch>
       <App /> 

@@ -49,3 +49,53 @@
 .dev-profile-info p {
     margin-top: 10px;
 }
+
+
+@media only screen 
+  and (min-device-width: 481px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+  
+}
+
+@media only screen 
+  and (min-device-width: 120px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .dev-profile{
+        width: 700px;
+        height: 700px;
+        margin : 20% 16%;
+    }
+    .dev-profile-pic {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .dev-profile-pic img {
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+    }
+    .dev-profile-info {
+        padding: 10px;
+        font-size: 26px;
+    }
+    .dev-profile-info ul {
+        list-style: none;
+    }
+    .dev-profile-info ul li {
+        margin : 30px;
+    }
+    .dev-profile-info ul li span {
+        font-weight: 700;
+    }
+    .dev-profile-info p {
+        margin-top: 15px;
+    }
+    .dev-profile-info .dev-profile-bio {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+  
+}

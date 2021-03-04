@@ -14,7 +14,7 @@ const SinglePostPage = props => {
 
     const devObj = dev
     if(!devObj){
-        useHistory().push('/sign-in');
+        useHistory().push('/');
     } 
 
     const filteredPost = posts.filter(post => post._id === _id)
@@ -44,7 +44,7 @@ const SinglePostPage = props => {
                 <RelatedStory posts={relatedStories} />
                 </div>
             </div>
-            <div>
+            <div className="next-stories">
                 <h3>NEXT STORIES ON YOUR LIST</h3>
                 <hr></hr>
                 <MostViewedPost mostViewedPosts={mostViewedPosts} />

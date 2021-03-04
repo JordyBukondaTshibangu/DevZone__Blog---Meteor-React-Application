@@ -58,25 +58,25 @@ const UpdateProfile = props => {
                 </form>
                 <div className="info">
                 <form onSubmit={editProfile}>
-                    <div>
+                    <div className="input-group">
                         <span>Full Name</span>
                         <input type="text" value={updatedFullName} onChange={e => setFullName(e.target.value) } />
                     </div>
-                    <div>
+                    <div className="input-group">
                         <span>Date of Birth </span>
                         <input type="text" value={updatedDateOfBirth} onChange={ e => setDateOfBirth(e.target.value)} />
                     </div>
-                    <div>
+                    <div className="input-group">
                         <span>Email</span>
                         <input type="text" value={updatedEmail} onChange={e => setEmail(e.target.value) } />
                     </div>
-                    <div>
+                    <div className="input-group">
                         <span>My Profil Picture</span>
                         <input type="text" value={updatedAvatar} onChange={e => setAvatar(e.target.value) } />
                     </div>
                     <div>
                         <p>My bio</p>
-                        <textarea type="text" value={updatedMyBio} onChange={e => setMyBio(e.target.value) } rows="7" cols="70" className="text-area-bio"></textarea>
+                        <textarea type="text" value={updatedMyBio} onChange={e => setMyBio(e.target.value) } rows="7" cols="90" className="text-area-bio"></textarea>
                     </div>
                     <div className="btn-section">
                         <button type="submit">Edit my profile </button>

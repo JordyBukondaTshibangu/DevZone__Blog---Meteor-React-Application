@@ -37,24 +37,24 @@ const SinglePost = props => {
     return (
         <div> {error}
                <div key={_id} className="post-card">
-                        <div className="post-card-head">
-                    <h3>{author}</h3>
-                    <span> published : {date(createdAt)}</span> 
-                    <h1>{title}</h1>
-                    <button onClick={() => setShowDescription(!showDescription)} className="btn-description"> 
-                        { showDescription ?  'Hide Description ' : 'show description'}
-                    </button>
-                    {
-                        !showDescription ? null : (
-                            <div className="post-description">
-                                <p>Description</p>
-                                <p>{description}</p>
-                            </div>
-                        )
-                    }
-                        <p>Content</p>
-                        <p>{ReactHtmlParser(content)}</p>
-                </div>
+                    <div className="post-card-head">
+                        <h3>{author}</h3>
+                        <span> published : {date(createdAt)}</span> 
+                        <h1>{title}</h1>
+                        <button onClick={() => setShowDescription(!showDescription)} className="btn-description"> 
+                            { showDescription ?  'Hide Description ' : 'show description'}
+                        </button>
+                        {
+                            !showDescription ? null : (
+                                <div className="post-description">
+                                    <p>Description</p>
+                                    <p>{description}</p>
+                                </div>
+                            )
+                        }
+                            <p>Content</p>
+                            <p>{ReactHtmlParser(content)}</p>
+                    </div>
                 <div className="post-card-img">
                     <img src={image} alt="/" />
                 </div>

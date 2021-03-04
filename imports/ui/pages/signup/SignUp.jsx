@@ -29,7 +29,7 @@ const SignUp = () => {
             setError(true);
             setMessage("Password don't match")
             setTimeout(()=> {
-                history.push('/sign-in');
+                history.push('/');
             },3000)
             return;
         }
@@ -44,7 +44,7 @@ const SignUp = () => {
             if(error) {
                 setError(true);
                 setTimeout(()=> {
-                    history.push('/sign-in');
+                    history.push('/');
                 },3000)
                 return;
             }
@@ -97,7 +97,7 @@ const SignUp = () => {
                         <button type="submit">Sign Up </button>
                     </div>
                     <div className="go-to-sign-up">
-                        <h6>Already a devzoner, <Link to="/sign-in">Sign In</Link></h6>
+                        <h6>Already a devzoner, <Link to="/">Sign In</Link></h6>
                     </div>
                 </form>
             </div>

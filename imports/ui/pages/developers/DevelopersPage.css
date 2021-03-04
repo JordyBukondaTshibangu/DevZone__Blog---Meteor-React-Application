@@ -71,11 +71,34 @@
   and (-webkit-min-device-pixel-ratio: 2) {
 
     .dev-page-container {
-        grid-template-columns: 1fr;
-        background-color: #fff;
-        }
-        .dev-page-container .dev-card {
-        margin: 30px auto;
-        width: 60%;
-        }
+      grid-template-columns: 1fr;
+      background-color: #fff;
+    }
+    .dev-page-container .dev-card {
+      margin: 30px auto;
+      width: 60%;
+      height: 600px;
+    }
+    .dev-page-container .dev-card img {
+      height: 350px;
+    }
+    .dev-page-container .dev-card-body h4 {
+      font-size: 36px;
+      margin-top: 20px;
+    }
+    .dev-page-container .dev-card-body h6 {
+      font-weight: 800;
+      font-size: 26px;
+      margin-top: 15px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .dev-card-button {
+      padding: 20px;
+    }
+    .dev-card-button button {
+      width: 220px;
+      height: 60px;
+      font-size: 24px;
+      font-weight: 700;
+    }
 }
