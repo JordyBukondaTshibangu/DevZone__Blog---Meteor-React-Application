@@ -75,7 +75,7 @@ const NewPostPage = props => {
                         <div className="input-group">
                             <input type="text" placeholder="image url" value={image} onChange={ e => setImage(e.target.value)}/>
                         </div> 
-                        <div className="input-group">
+                        <div className="input-group input-description">
                             <input value={description} placeholder="Add a description of less than 200 words" onChange={ e => setDescription(e.target.value)} className="description-text" required/>
                         </div>
                     </div>

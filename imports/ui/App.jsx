@@ -10,7 +10,7 @@ export const App = () => {
 
     const dev = JSON.parse(localStorage.getItem('dev'));
 
-    if(!dev) history.push('/sign-in');
+    if(!dev) history.push('/');
     
 
     const [openMenu, setOpenMenu] = useState(false);

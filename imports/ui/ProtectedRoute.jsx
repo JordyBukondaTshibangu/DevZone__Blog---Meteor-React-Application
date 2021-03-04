@@ -16,7 +16,7 @@ const ProtectedRoute = props => {
     const isAuthenticated = dev.email;
 
 
-    return isAuthenticated ? <Component propsData={props} dev={dev}/> : <Redirect to={{pathname : "/sign-in"}} />
+    return isAuthenticated ? <Component propsData={props} dev={dev}/> : <Redirect to={{pathname : "/"}} />
 }
 
 export default ProtectedRoute;

@@ -82,26 +82,101 @@
   }
 
   @media only screen 
+  and (min-device-width: 481px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {  
+  
+      .new-post-section input {
+        width: 50%;
+      }
+      .new-post-section button {
+        margin: 60px 200px 50px 120px ;
+        border: 1px solid #000;
+      }
+      .new-post-section button {
+        border: 1px solid #000;
+      }
+  }
+
+  @media only screen 
   and (min-device-width: 120px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
   
-      .posts-page-container .post-card {
-        width: 75%;
-        margin-bottom: 50px;
-        height: 100%;
-        margin-top: 20px;
-        border-bottom: 2px solid #000;
-        
-      }
-      .post-card-head p {
-        font-size : 30px;
-      }
-      .post-card-img {
-        height: 400px;
-      }
-      
-      .profile-container {
-        margin: 20px 10px;
-      }
+    .posts-page-container .post-card {
+      background-color: #fff;
+      margin-bottom: 120px;
+      box-shadow: 2px 2px 10px 0 rgb(0, 0, 0,.4);
+      padding-top: 50px;
+      padding-left: 20px;
+      width: 88vw;
+    }
+    .posts-list .card .card-head{
+      padding: 20px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      background-color: coral;
+    }
+    
+    .post-card-head h1{
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+      font-size: 50px;
+      margin: 45px 80px 25px 40px;
+    }
+    .post-card-head h3{
+      text-transform: uppercase;
+      font-size: 30px;
+      padding-left: 20px;
+    }
+    .post-card-head span {
+      font-weight: 100;
+      font-size : 24px;
+      padding-left: 50px;
+    }
+    .post-card-head .btn-description {
+      margin-left: 300px;
+      margin-top: 50px;
+    }
+    .post-card-head p {
+      font-size : 33px;
+      margin-left: 30px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .post-card-img {
+      height: 500px;
+    }
+    .post-card-img img {
+      width: 100%;
+      height: 100%;
+    }
+    .post-description {
+      margin: 20px 20px;
+      box-shadow: 5px 5px 30px 0 rgb(0, 0, 0,.7);
+      padding: 10px;
+      font-size: 28px;
+    }
+    .btn-description {
+      width: 200px;
+      height: 50px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    
+    .btn-section {
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      height: 50px;
+      width: 500px;
+      padding-top: 10px;
+    }
+    .btn-section button {
+      width: 200px;
+      height: 50px;
+      font-size: 18px;
+    }
   }

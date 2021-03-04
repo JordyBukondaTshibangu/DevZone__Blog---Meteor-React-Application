@@ -8,7 +8,7 @@ const MyProfile = props => {
     const dev = props.dev;
     let history = useHistory();
 
-    if(!dev) useHistory().push('/sign-in');
+    if(!dev) useHistory().push('');
     
     const { fullName, dateOfBirth, myBio, avatar, email } = dev
     
@@ -37,19 +37,19 @@ const MyProfile = props => {
                 </div>
                 <div className="info">
                     <div>
-                        <div>
+                        <div className="input-group">
                             <span>Full Name : </span>
                             <input type="text" value={fullName} disabled />
                         </div>
-                        <div>
+                        <div className="input-group">
                             <span>Birth day :</span>
                             <input type="text" value={dateOfBirth} disabled />
                         </div>
-                        <div>
+                        <div className="input-group">
                             <span>Email :</span>
                             <input type="text" value={email} disabled />
                         </div>
-                        <div>
+                        <div className="input-group">
                             <span>Join on : </span>
                             <input type="text" value={""} disabled />
                         </div>

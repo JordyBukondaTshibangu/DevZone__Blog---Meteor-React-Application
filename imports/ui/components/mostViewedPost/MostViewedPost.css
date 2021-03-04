@@ -28,3 +28,41 @@
     font-size: 12px;
     letter-spacing: 1px;
 }
+
+@media only screen 
+  and (min-device-width: 481px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+  }
+
+  @media only screen 
+  and (min-device-width: 120px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+      .most-viewed-story {
+        margin-top: 20px;
+        }
+        .most-viewed-story-head {
+            margin-right: 20px;
+            width: 300px;
+            background-color: yellow;
+        }
+        .most-viewed-story-head img {
+            width: 200px;
+            height: 170px;
+        }
+        .most-viewed-story-body {
+            margin-top: 5px;
+        }
+        .most-viewed-story-body h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+
+        }
+        .most-viewed-story-body p{ 
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+    
+  }

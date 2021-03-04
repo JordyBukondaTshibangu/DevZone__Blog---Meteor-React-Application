@@ -18,7 +18,7 @@ const DevProfile = ({devProfile, closeProfileModal}) => {
                         <li> Bio </li>
                     </ul>
                     <hr></hr>
-                    <p>{myBio}</p>
+                    <p className="dev-profile-bio">{myBio}</p>
                 </div>
             </div>
         </div>

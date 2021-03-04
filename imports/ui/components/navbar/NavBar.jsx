@@ -16,7 +16,7 @@ const NavBar = props => {
 
     const handleLogout = () => {
         localStorage.removeItem('dev');
-        history.push('/sign-in')
+        history.push('/')
     }
 
     console.log(dev.avatar)

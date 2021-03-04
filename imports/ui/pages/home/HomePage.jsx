@@ -17,7 +17,7 @@ const HomePage = ({posts, dev}) => {
 
     return (
         <div className="home-page-container">
-            <div>
+            <div className="blog-category-listing">
                 <h3>BLOG CATEGORIES</h3>
                 <hr></hr>
                 <BlogCategories/>
