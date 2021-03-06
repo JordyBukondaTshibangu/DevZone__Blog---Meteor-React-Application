@@ -4,7 +4,7 @@ import {PostsCollection} from "../../../db/posts/collection";
 import BlogCategories from '../../containers/blogCategories/BlogCategories.jsx';
 import LatestStories from '../../containers/latestStories/LatestStories.jsx';
 import MostViewed from '../../containers/mostViewed/MostViewed.jsx';
-import DevZoners from '../../containers/devZoners/DevZoners.jsx'
+import DevZoners from '../../containers/devZoners/DevZoners.jsx';
 import './HomePage.css';
 
 

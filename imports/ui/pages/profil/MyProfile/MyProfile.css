@@ -1,5 +1,5 @@
 .profile-container {
-    margin: 20px 140px;
+    margin: 20px 100px;
   }
 .profile-container .user-details {
   display: flex;
@@ -53,6 +53,16 @@
 and (min-device-width: 481px) 
 and (max-device-width: 1024px) 
 and (-webkit-min-device-pixel-ratio: 1) {
+  .profile-container {
+    margin: auto;
+    background-color: #fff;
+  }  
+  .profile-container .user-details {
+    display: flex;
+    background: #fff;
+    border: none;
+    padding: 20px;
+  }
     
 }
 
@@ -63,7 +73,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .profile-container {
     margin: 20px 10px;
-    height: 90vh;
+    height: 90%;
   }
   .profile-container .user-details {
     height: 100%;

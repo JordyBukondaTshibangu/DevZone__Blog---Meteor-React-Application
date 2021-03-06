@@ -12,7 +12,15 @@
   and (min-device-width: 481px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-    
+    .latest-stories {
+        display: grid;
+        grid-template-columns: 1.2fr .8fr;
+        margin-bottom: 10px;
+    }
+    .latest-stories-side {
+        margin-left: 80px;
+        margin-top: 10px;
+    }
   }
 
   @media only screen 

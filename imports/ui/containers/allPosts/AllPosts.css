@@ -17,7 +17,18 @@
   and (min-device-width: 481px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-
+    .posts-list-result {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+      margin: 30px 10px;
+      padding: 20px;
+    }
+    .posts-list {
+        display: grid;
+        grid-template-columns: .8fr .8fr;
+        justify-content: space-between;
+    }
 }
 
 @media only screen 

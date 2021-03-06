@@ -44,8 +44,8 @@
  
     .side-bar-menu {
         position : fixed;
-        width: 800px;
-        height : 2700px;
+        width: 850px;
+        height : 100vh;
         transform : translate(60%, 0%);
       }
       .side-bar-menu  ul {
