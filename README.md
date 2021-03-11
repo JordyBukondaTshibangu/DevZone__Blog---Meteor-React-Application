@@ -1,8 +1,8 @@
-# DevZone__Blog---Meteor-React-Application
+# THE-PEOPLE-S-BLOG__METEOR-REACT-App
 
 
 
-### DevZone__ ( Blog )
+### THE-PEOPLE-S-BLOG__ ( Blog )
 
 Devzone is a blog for developer which allows them to share their thoughts or what they working on.
 It also a platform that let developers get to know each others 
