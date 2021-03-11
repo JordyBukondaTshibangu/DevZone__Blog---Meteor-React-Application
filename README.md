@@ -4,7 +4,8 @@
 
 ### THE-PEOPLE-S-BLOG__ ( Blog )
 
-Devzone is a blog for developer which allows them to share their thoughts or what they working on.
+THE-PEOPLE-S-BLOG is a blog for developers
+which allows them to share their thoughts or what they working on.
 It also a platform that let developers get to know each others 
 This is a personal training project to learn about a technology call Meteor.
 
@@ -17,7 +18,7 @@ This is a personal training project to learn about a technology call Meteor.
 
 ### Launch
 
-*  git clone git@github.com:JordyBukondaTshibangu/DevZone__Blog---Meteor-React-Application.git
-* cd DevZone__Blog---Meteor-React-Application
+*  git@github.com:JordyBukondaTshibangu/THE-PEOPLE-S-BLOG__METEOR-REACT-App.git
+* cd THE-PEOPLE-S-BLOG__METEOR-REACT-App
 * npm install 
 * meteor run (The server will start on localhost:3000)
