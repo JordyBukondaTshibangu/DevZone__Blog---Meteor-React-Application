@@ -30,6 +30,13 @@ This is a personal training project to learn about a technology call Meteor.
 
 
 
+
+
+
+
+
+
+
 ## APP STRUCTURE AND KEY POINTS
 
 - [x] Database  => Collections (Developers || Posts ) 
