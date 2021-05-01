@@ -18,9 +18,13 @@ const LoginPage = () => {
 
         Meteor.call('dev.login', dev, (error, res) => {
             if(error)  setError("There was an error ")
-            
-            localStorage.setItem('dev', JSON.stringify(res))
-            history.push('/home')
+            console.log(res)
+           if(res){
+                localStorage.setItem('dev', JSON.stringify(res))
+                history.push('/home')
+           } else {
+            history.push('/sign-in')
+           }
         })
         
     }

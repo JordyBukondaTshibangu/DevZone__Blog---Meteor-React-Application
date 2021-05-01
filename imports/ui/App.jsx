@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom'
 import NavBar from './components/navbar/NavBar.jsx';
 import SideBarMenu from './components/sidebarMenu/SideBarMenu.jsx';
+import LoginPage from './pages/login/LoginPage'
 
 export const App = () => {
 
     const history = useHistory();
 
     const dev = JSON.parse(localStorage.getItem('dev'));
+    console.log(dev, "from app component")
 
-    if(!dev) history.push('/');
+    if(!dev){
+         history.push('/')
+    };
     
 
     const [openMenu, setOpenMenu] = useState(false);
@@ -23,7 +27,7 @@ export const App = () => {
     }
 
     return (
-      !dev ? null : 
+      !dev ? <LoginPage /> : 
       <div>
         <NavBar dev={dev}
             openSideMenu={openSideMenu}/> {

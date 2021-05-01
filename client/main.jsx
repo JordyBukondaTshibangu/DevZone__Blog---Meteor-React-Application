@@ -56,7 +56,7 @@ const routes = (
 
         <ProtectedRoute path="/about" exact component={AboutPage} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   </BrowserRouter>
 
