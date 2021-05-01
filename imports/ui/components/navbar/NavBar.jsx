@@ -19,7 +19,6 @@ const NavBar = props => {
         history.push('/')
     }
 
-    console.log(dev.avatar)
     return (
         <nav>
             <div className="logo-section">

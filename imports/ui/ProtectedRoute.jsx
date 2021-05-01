@@ -1,22 +1,20 @@
-import React from 'react';
-import {useHistory} from 'react-router-dom';
-import {Redirect} from 'react-router-dom';
+import React from 'react'
+import {useHistory} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 
 const ProtectedRoute = props => {
 
-    const history = useHistory();
     const dev = JSON.parse(localStorage.getItem('dev'));
 
-    if (! dev) 
-        history.push('/sign-up');
-    
+    const history = useHistory()
 
+    if (!dev || dev === null) 
+        history.push('/sign-up')
 
-    const Component = props.component;
-    const isAuthenticated = dev.email;
-
+    const Component = props.component
+    const isAuthenticated = dev.email
 
     return isAuthenticated ? <Component propsData={props} dev={dev}/> : <Redirect to={{pathname : "/"}} />
 }
 
-export default ProtectedRoute;
+export default ProtectedRoute

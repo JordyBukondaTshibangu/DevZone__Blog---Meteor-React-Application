@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom';
 
+import UserContextProvider from '../imports/ui/context/UserContext'
 import { App } from '/imports/ui/App';
 import Footer from '../imports/ui/components/footer/Footer.jsx'
 import ProtectedRoute from '../imports/ui/ProtectedRoute';
@@ -33,13 +34,12 @@ import AboutPage from '../imports/ui/pages/about/AboutPage.jsx';
 const routes = (
 
   <BrowserRouter>
-    <div>
+    <UserContextProvider>
       <Switch>
         <Route path="/" exact component={LoginPage} />
         <Route path="/sign-up" exact component={SignUp} />
       </Switch>
       <App /> 
-      {/* Find a better way to handle the App and the Footer component */}
       <Switch>
         <ProtectedRoute path="/home" exact component={HomePage} />
 
@@ -57,7 +57,7 @@ const routes = (
         <ProtectedRoute path="/about" exact component={AboutPage} />
       </Switch>
       <Footer />
-    </div>
+    </UserContextProvider>
   </BrowserRouter>
 
 )
