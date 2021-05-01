@@ -8,7 +8,7 @@ import DevZoners from '../../containers/devZoners/DevZoners.jsx';
 import './HomePage.css';
 
 
-const HomePage = ({posts, dev}) => {
+const HomePage = ({posts}) => {
 
     const mostViewed = posts.sort((a,b) => b.likes - a.likes);
     const mostViewedPosts = mostViewed.filter((post, index) => {

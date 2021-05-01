@@ -1,40 +1,25 @@
-import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../context/UserContext';
 import './LoginPage.css';
 
 const LoginPage = () => {
 
-    let history = useHistory()
+    const { handleLogin } = useContext(UserContext)
 
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
-    const [ error, setError ] = useState("");
-
-    const handleLogin = evt => {
-
+    
+    const loginHandler = evt => {
         evt.preventDefault();
-
-        const dev = { email, password }
-
-        Meteor.call('dev.login', dev, (error, res) => {
-            if(error)  setError("There was an error ")
-            console.log(res)
-           if(res){
-                localStorage.setItem('dev', JSON.stringify(res))
-                history.push('/home')
-           } else {
-            history.push('/sign-in')
-           }
-        })
-        
+        handleLogin(email, password)
     }
 
     return (
         <div className="login-container">
             <div className="login-box">
                 <h3>Sign In </h3>
-                { error }
-                <form onSubmit={handleLogin}>
+                <form onSubmit={loginHandler}>
                     <div className="input-group">
                         <input type="email" placeholder="Email address" value={email} onChange={e => setEmail(e.target.value)} required/>
                     </div>

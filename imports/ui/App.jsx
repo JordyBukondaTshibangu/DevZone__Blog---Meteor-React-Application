@@ -1,22 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState } from 'react';
 import ReactDOM from 'react-dom';
-import { useHistory } from 'react-router-dom'
+import { useHistory, Redirect } from 'react-router-dom'
 import NavBar from './components/navbar/NavBar.jsx';
 import SideBarMenu from './components/sidebarMenu/SideBarMenu.jsx';
-import LoginPage from './pages/login/LoginPage'
 
 export const App = () => {
 
     const history = useHistory();
 
     const dev = JSON.parse(localStorage.getItem('dev'));
-    console.log(dev, "from app component")
 
     if(!dev){
          history.push('/')
     };
     
-
+    console.log(dev)
     const [openMenu, setOpenMenu] = useState(false);
 
     const openSideMenu = () => {
@@ -27,12 +25,11 @@ export const App = () => {
     }
 
     return (
-      !dev ? <LoginPage /> : 
+      !dev.email ? <Redirect to={{pathname : "/"}} /> : 
       <div>
         <NavBar dev={dev}
             openSideMenu={openSideMenu}/> {
         openMenu ? ReactDOM.createPortal (<SideBarMenu closeSideMenu={closeSideMenu}/>, document.getElementById('react-portal')) : null
     } </div>
     )
-
 };

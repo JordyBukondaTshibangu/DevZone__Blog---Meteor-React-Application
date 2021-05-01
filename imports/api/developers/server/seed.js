@@ -48,7 +48,7 @@ function insertDev({ fullName, dateOfBirth, email, myBio, password, avatar }){
   DevelopersCollection.insert({fullName,avatar, dateOfBirth, email, myBio, password, createdAt : new Date()})
 }
 
-if(DevelopersCollection.find().count() === 0){
+if(DevelopersCollection.find().count() < 1){
     developers.forEach(developer => {
         const { fullName, dateOfBirth, email, myBio, password, avatar } = developer
         insertDev({ fullName, dateOfBirth, email, myBio, password, avatar })
