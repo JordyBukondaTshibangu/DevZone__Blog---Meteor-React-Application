@@ -8,7 +8,6 @@ const DevCard = ({developer}) => {
             <div className="bloger-card-body">
                 <h5>{ developer.fullName }</h5>
                 <h6>{ developer.email }</h6>
-                
             </div>
         </div>
     )

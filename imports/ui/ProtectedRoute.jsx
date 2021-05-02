@@ -12,9 +12,9 @@ const ProtectedRoute = props => {
         history.push('/sign-up')
 
     const Component = props.component
-    const isAuthenticated = dev.email
+    const isAuthenticated = dev.email || ""
 
-    return isAuthenticated ? <Component propsData={props} dev={dev}/> : <Redirect to={{pathname : "/"}} />
+    return isAuthenticated !== "" ? <Component propsData={props} dev={dev}/> : <Redirect to={{pathname : "/"}} />
 }
 
 export default ProtectedRoute

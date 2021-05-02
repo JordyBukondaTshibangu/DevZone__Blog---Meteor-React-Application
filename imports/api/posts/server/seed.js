@@ -101,7 +101,6 @@ function insertPost({title, tagline, description, image, author, email, category
 }
 
 if(PostsCollection.find().count() < 2){
-    console.log("Inserting Posts data into db")
     posts.forEach(post => {
         const { title, tagline, description, image, author, email, category, content, likes, comments } = post;
         insertPost({title, tagline, description, image, author, email, category, content, likes, comments })

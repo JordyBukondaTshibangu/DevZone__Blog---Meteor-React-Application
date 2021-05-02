@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 40px 10px 40px 20px;
     background-color: #eee;
-    height: 100vh;
+    height: 100%;
 }
 .dev-page-container .dev-card {
   width: 75%;

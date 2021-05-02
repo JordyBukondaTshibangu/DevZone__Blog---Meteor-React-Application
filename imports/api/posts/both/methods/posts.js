@@ -39,7 +39,6 @@ Meteor.methods({
         return PostsCollection.remove({_id});
     },
     'post.like'({_id, like}){
-        console.log(like, _id)
         if(!_id || !like) return 
 
         return PostsCollection.update({_id},
@@ -49,7 +48,6 @@ Meteor.methods({
     },
     'post.comment'({ _id, content, email, author}){
         if(!_id || !content || !email || !author) {
-            console.log("somethin happen")
             return;
         } 
 

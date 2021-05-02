@@ -112,7 +112,7 @@
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .posts-container {
-        height: 100vh;
+        height: 100%;
     }
     .posts-container-header {
         background-color: #fff;

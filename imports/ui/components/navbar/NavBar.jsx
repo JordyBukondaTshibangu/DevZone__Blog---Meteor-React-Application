@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import ReactDOM from 'react-dom';
-import { Link , useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild, FaUser, FaCog } from 'react-icons/fa';
 import './NavBar.css';
+import { UserContext } from '../../context/UserContext';
 
 const NavBar = props => {
 
-    let history = useHistory();
+    const { handleLogout, userState } = useContext(UserContext)
 
     const dev = props.dev ;
     const [ showModal, setShowModal ] = useState(false);
 
     const avatarAlt = "https://www.pngitem.com/pimgs/m/24-248235_user-profile-avatar-login-account-fa-user-circle.png";
     
-
-    const handleLogout = () => {
-        localStorage.removeItem('dev');
-        history.push('/')
-    }
 
     return (
         <nav>
@@ -58,7 +54,9 @@ const NavBar = props => {
                                     <li><Link to="/my-posts" className="list-item-group"><FaBook/><span>My posts</span></Link></li>
                                     <li><Link to="/new-post" className="list-item-group"><FaPlusSquare/><span>Add new post</span></Link></li>
                                     <li>
-                                        <button onClick={handleLogout}> Log out </button>
+                                        <a href="/">
+                                            <button onClick={handleLogout}> Log out </button>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

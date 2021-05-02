@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link  } from 'react-router-dom';
 import { FaHome, FaPlusSquare, FaUsers, FaBook, FaChild, FaUser, FaCog } from 'react-icons/fa';
 import './SideBarMenu.css';
+import { UserContext } from '../../context/UserContext';
 
 const SideBarMenu = props => {
 
+    const { handleLogout } = useContext(UserContext)
     return (
         <div className="overlay" onClick={props.closeSideMenu}>
             <div className="side-bar-menu">
@@ -18,7 +20,9 @@ const SideBarMenu = props => {
                     <li><Link to="/update-my-profile" className="list-item-group"><FaCog/><span>Update Profil</span></Link></li>
                     <li><Link to="/my-posts" className="list-item-group"><FaBook/><span>My posts</span></Link></li>
                     <li>
-                        <button onClick={props.handleLogout}> Log out </button>
+                        <a href="/">
+                            <button onClick={handleLogout}> Log out </button>
+                        </a>
                     </li>
                 </ul>
         </div>

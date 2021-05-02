@@ -1,7 +1,8 @@
 .blogger-card {
     margin: 15px;
-    height: 90%;
-    width: 80%;
+    margin-left: 5px;
+    height: 60%;
+    width: 60%;
     color: #000;
     text-align: center;
   }

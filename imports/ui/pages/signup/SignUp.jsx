@@ -12,7 +12,7 @@ const SignUp = () => {
 
     let history = useHistory();
 
-    const {handleRegister, userState} = useContext(UserContext)
+    const {handleRegister, errorFlag} = useContext(UserContext)
 
     const [fullName, setFUllName] = useState("");
     const [dateState, setDateState] = useState(new Date());
@@ -37,8 +37,8 @@ const SignUp = () => {
             return;
         }
         handleRegister(fullName, dateOfBirth = moment(dateState).format('MMMM Do YYYY'), email, password)
-        setError(userState.error)
-        setSuccess(userState.success)
+        setError(errorFlag)
+        setSuccess(errorFlag)
     }
 
     return (<div className="login-container"> {

@@ -20,7 +20,6 @@ const Comments = ({comments, dev, postId}) => {
 
         Meteor.call('post.comment', commentObject, error => {
             if (error) {
-                console.log(error);
                 return
             }
             setNewComment("");

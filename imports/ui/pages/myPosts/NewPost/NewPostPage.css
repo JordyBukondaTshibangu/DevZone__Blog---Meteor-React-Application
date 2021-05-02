@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     margin: 20px auto;
     margin-left: 10px;
-    height: 100vh;
+    height: 100%;
   }
 .new-post-container h3 {
     margin: 30px;
@@ -127,7 +127,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
         grid-template-rows: 0.2fr 1fr;
       }
       .new-post-container h3 {
-        margin: 25px auto 0;
+        margin: 25px auto 80px;
         font-size: 80px;
         font-weight: 600;
         font-family: 'Times New Roman', Times, serif;

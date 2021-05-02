@@ -53,7 +53,6 @@ Meteor.methods({
 				myBio,
 				avatar,
 			}
-			console.log(updatedDev)
 			return
 		}
 		return DevelopersCollection.update(
