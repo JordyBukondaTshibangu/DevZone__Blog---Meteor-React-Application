@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-content: space-between;
-    margin: 20px 10px;
+    /* margin: 20px 10px; */
 }
 
 @media only screen 
@@ -13,7 +13,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: space-between;
-        margin: 20px 10px;
+        margin: 10px;
     }
 }
 
@@ -25,6 +25,5 @@ and (-webkit-min-device-pixel-ratio: 1) {
         display: grid;
         grid-template-columns: 1fr;
         justify-content: space-between;
-        margin: 20px 10px;
     }
   }
