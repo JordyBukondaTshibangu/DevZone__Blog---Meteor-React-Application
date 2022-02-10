@@ -5,7 +5,6 @@ import BlogCategories from '../../containers/blogCategories/BlogCategories.jsx';
 import LatestStories from '../../containers/latestStories/LatestStories.jsx';
 import MostViewed from '../../containers/mostViewed/MostViewed.jsx';
 import DevZoners from '../../containers/devZoners/DevZoners.jsx';
-import './HomePage.css';
 
 
 const HomePage = ({posts}) => {
@@ -17,7 +16,7 @@ const HomePage = ({posts}) => {
 
     return (
         <div className="home-page-container">
-            <div className="blog-category-listing">
+            {/* <div className="blog-category-listing">
                 <h3>BLOG CATEGORIES</h3>
                 <hr></hr>
                 <BlogCategories/>
@@ -36,7 +35,7 @@ const HomePage = ({posts}) => {
                 <h3>DEV ZONERS</h3>
                 <hr></hr>
                 <DevZoners />
-            </div>
+            </div> */}
         </div>
 
 
