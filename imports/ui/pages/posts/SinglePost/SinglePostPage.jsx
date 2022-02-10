@@ -5,7 +5,7 @@ import SinglePost from '../../../components/post/Post.jsx';
 import RelatedStory from '../../../containers/relatedStories/RelatedStories.jsx'
 import MostViewedPost from '../../../containers/mostViewed/MostViewed.jsx';
 import { PostsCollection } from "../../../../db/posts/collection";
-import './SinglePostPage.css';
+
 
 const SinglePostPage = props => {
  

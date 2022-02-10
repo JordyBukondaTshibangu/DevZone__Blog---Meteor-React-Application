@@ -5,7 +5,6 @@ import {CKEditor} from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import Success from '../../../feedback/Success';
 import Error from '../../../feedback/Error';
-import './NewPostPage.css';
 
 const NewPostPage = props => {
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import './LatestStory.css'
 
 const LatestStory = ({latestStory}) => {
     

@@ -1,5 +1,4 @@
 import React from 'react';
-import './CategorySideBar.css';
 
 const CategorySideBar = ({filterPostByCategory}) => {
     const categories = ["Programming", "health", "science", "architecture", "chemistry", "tech", "Religion", "Music", "Culture", "Artificial intelligence", "Novel" ]

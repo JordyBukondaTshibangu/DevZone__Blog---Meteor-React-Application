@@ -1,5 +1,4 @@
 import React from 'react';
-import './MostViewedPost.css';
 
 const MostViewedPost = ({mostViewedPost}) => {
     return (

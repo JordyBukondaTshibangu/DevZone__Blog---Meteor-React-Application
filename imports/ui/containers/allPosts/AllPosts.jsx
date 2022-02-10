@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import MostViewedPost from '../../components/mostViewedPost/MostViewedPost.jsx';
-import './AllPosts.css';
+
 
 const AllPosts = ({posts, search, category }) => {
     let history = useHistory();

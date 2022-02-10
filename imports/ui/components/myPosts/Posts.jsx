@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import ReactHtmlParser from 'react-html-parser';
 import {Link, useHistory } from 'react-router-dom';
-import './Posts.css';
+
 
 const SinglePost = props => {
 

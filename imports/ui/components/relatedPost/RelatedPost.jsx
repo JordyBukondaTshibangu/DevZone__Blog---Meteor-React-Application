@@ -1,5 +1,4 @@
 import React from 'react';
-import './RelatedPost.css';
 
 const RelatedStory = ({post}) => {
     const { image, tagline, title } = post

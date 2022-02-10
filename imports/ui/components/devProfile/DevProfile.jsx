@@ -1,5 +1,4 @@
 import React from 'react';
-import './DevProfile.css'
 
 const DevProfile = ({devProfile, closeProfileModal}) => {
 

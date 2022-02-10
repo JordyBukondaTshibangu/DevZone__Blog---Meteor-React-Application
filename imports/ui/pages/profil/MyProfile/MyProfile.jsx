@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useHistory  } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
-import './MyProfile.css';
+
 
 const MyProfile = props => {
 

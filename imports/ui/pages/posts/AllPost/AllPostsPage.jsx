@@ -5,7 +5,6 @@ import { PostsCollection } from "../../../../db/posts/collection";
 import LoadingSpinner from '../../../feedback/LoadingSpinner'
 import CategorySideBar from '../../../components/categorySideBar/CategorySideBar.jsx'
 import AllPosts from '../../../containers/allPosts/AllPosts.jsx';
-import './AllPostPage.css';
 
 
 const PostsPage = ({ posts }) => {
