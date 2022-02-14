@@ -6,6 +6,8 @@ import { Meteor } from 'meteor/meteor';
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import { render } from 'react-dom';
 
+
+import GlobalStyle from '../imports/ui/createGlobalStyle';
 import UserContextProvider from '../imports/ui/context/UserContext'
 import { App } from '/imports/ui/App';
 import Footer from '../imports/ui/components/footer/Footer.jsx'
@@ -14,7 +16,6 @@ import ProtectedRoute from '../imports/ui/ProtectedRoute';
 import LoginPage from '../imports/ui/pages/login/LoginPage.jsx';
 import SignUp from '../imports/ui/pages/signup/SignUp.jsx';
 import HomePage from '../imports/ui/pages/home/HomePage.jsx';
-
 
 import SinglePost from '../imports/ui/pages/posts/SinglePost/SinglePostPage.jsx';
 import PostsPage from '../imports/ui/pages/posts/AllPost/AllPostsPage.jsx';
@@ -35,6 +36,7 @@ const routes = (
 
   <BrowserRouter>
     <UserContextProvider>
+    <GlobalStyle />
       <Switch>
         <Route path="/" exact component={LoginPage} />
         <Route path="/sign-up" exact component={SignUp} />
@@ -42,18 +44,14 @@ const routes = (
       <App /> 
       <Switch>
         <ProtectedRoute path="/home" exact component={HomePage} />
-
         <ProtectedRoute path="/posts" exact component={PostsPage} />
         <ProtectedRoute path="/my-posts" exact component={MyPosts} />
         <ProtectedRoute path="/new-post" exact component={NewPostPage} />
         <ProtectedRoute path="/posts/:postId" exact component={SinglePost} />
         <ProtectedRoute path="/update-post/:postId" exact component={UpdatePost} />
-
         <ProtectedRoute path="/my-profile" exact component={MyProfile} />
         <ProtectedRoute path="/update-my-profile" exact component={UpdateProfil} />
-
         <ProtectedRoute path="/devs" exact component={DevelopersPage} />
-
         <ProtectedRoute path="/about" exact component={AboutPage} />
       </Switch>
       <Footer />

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import {useHistory, Redirect} from 'react-router-dom'
-import NavBar from './components/navbar/NavBar.jsx';
+import {useHistory, Redirect} from 'react-router-dom';
+import NavBar from './components/navbar/';
 import SideBarMenu from './components/sidebarMenu/SideBarMenu.jsx';
 
 export const App = () => {

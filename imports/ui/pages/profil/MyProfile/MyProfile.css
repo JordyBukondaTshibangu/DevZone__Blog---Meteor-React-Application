@@ -1,0 +1,148 @@
+.profile-container {
+    margin: 20px 100px;
+  }
+.profile-container .user-details {
+  display: flex;
+  background: #eee;
+  border: 1px solid black;
+  box-shadow: 7px 7px 50px 0 rgb(0, 0, 0,.7);
+}
+.profile-container .user {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 20px 20px;
+  text-align: center;
+  border: 1px solid #000;
+}
+.profile-container .user img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.profile-container .user h3 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 50px;
+}
+.profile-container .user ul {
+  margin-top: 20px;
+  text-align: start;
+  padding-left: 20px;
+}
+.profile-container .user li {
+  list-style: none;
+  margin: 5px 20px 1px 0;
+}
+.profile-container .user li span {
+  margin: 0 5px 0 10px;
+}
+
+.profile-container .info {
+  background: #fff;
+  padding: 40px;
+  border: 1px solid #000;
+}
+
+.profile-container .info div {
+  background: #fff;
+  margin-bottom: 30px;
+}
+@media only screen 
+and (min-device-width: 481px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 1) {
+  .profile-container {
+    margin: auto;
+    background-color: #fff;
+  }  
+  .profile-container .user-details {
+    display: flex;
+    background: #fff;
+    border: none;
+    padding: 20px;
+  }
+    
+}
+
+@media only screen 
+and (min-device-width: 120px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  .profile-container {
+    margin: 20px 10px;
+    height: 90%;
+  }
+  .profile-container .user-details {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 0.3fr 0.8fr;
+  }
+  .profile-container .user {
+    width: 90vw;
+    padding: 40px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    margin: 10px auto;
+  }
+  .profile-container .user img {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    margin-bottom: 10px;
+  }
+  .profile-container .user h3 {
+    font-size: 46px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+  }
+  .profile-container .user ul {
+    display: none;
+  }
+  .profile-container .info {
+    width: 85vw;
+    margin: 10px auto;
+    padding: 40px;
+    border: 1px solid #000;
+    font-size: 70px;
+  }
+  .profile-container .info .input-group {
+    margin: 30px 50px 20px 65px;
+    padding-left: 0;
+  }
+  .profile-container .info span {
+    width: 550px;
+    height: 70px;
+    font-size: 35px;
+  }
+  .profile-container .info input {
+    width: 550px;
+    padding: 10px;
+    padding-bottom: 5px;
+    height: 70px;
+    font-size: 30px;
+    margin-left: 25px;
+  }
+  .profile-container .info p {
+    background: #fff;
+    margin-top: 50px;
+    margin-left: 85px;
+    font-size: 35px;
+  }
+  .profile-container .btn-section  {
+    width: 80vw;
+    padding-left: 60px;
+  }
+  .profile-container .btn-section button {
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+  }
+  .profile-container .text-area-bio {
+    margin-left: 80px;
+    margin-top: 30px;
+  }
+}

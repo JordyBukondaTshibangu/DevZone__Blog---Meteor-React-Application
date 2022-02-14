@@ -1,10 +1,11 @@
 import React from 'react';
 import {withTracker} from 'meteor/react-meteor-data';
 import {PostsCollection} from "../../../db/posts/collection";
-import BlogCategories from '../../containers/blogCategories/BlogCategories.jsx';
-import LatestStories from '../../containers/latestStories/LatestStories.jsx';
+import BlogCategories from '../../containers/blogCategories/';
 import MostViewed from '../../containers/mostViewed/MostViewed.jsx';
 import DevZoners from '../../containers/devZoners/DevZoners.jsx';
+import HomePost from '../../components/HomePost'
+import styled from 'styled-components';
 
 
 const HomePage = ({posts}) => {
@@ -15,33 +16,48 @@ const HomePage = ({posts}) => {
     })
 
     return (
-        <div className="home-page-container">
-            {/* <div className="blog-category-listing">
-                <h3>BLOG CATEGORIES</h3>
-                <hr></hr>
+        <PageContainer>
+            <Category>
                 <BlogCategories/>
-            </div>
-            <div>
-                <h3>LATEST STORIES</h3>
-                <hr></hr>
-                <LatestStories posts={posts}/>
-            </div>
-            <div>
-                <h3>MOST VIEWED</h3>
-                <hr></hr>
-                <MostViewed mostViewedPosts={mostViewedPosts} />
-            </div>
-            <div className="dev-zoners">
-                <h3>DEV ZONERS</h3>
-                <hr></hr>
-                <DevZoners />
-            </div> */}
-        </div>
+            </Category>
+            <Container>
+                <PostsContainer>
+                    {
+                        posts.map((post, index) => <HomePost key={index} post={post} />)
+                    }
+                </PostsContainer>
+                <Side>
+                    <MostViewed mostViewedPosts={mostViewedPosts} />
+                    <DevZoners />
+                </Side>
+            </Container>
+        </PageContainer>
 
 
     )
 }
 
+
+const PageContainer = styled.div`
+    display : flex;
+    flex-direction : column;
+    overflow : hidden;
+`;
+const Category = styled.div``;
+const Container = styled.div`
+    width : 100%; 
+    display : grid;
+    grid-template-columns : 2fr 1fr;
+    overflow : auto;
+`;
+const PostsContainer = styled.div`
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+`;
+const Side = styled.div`
+    display : none
+`;
 
 export default withTracker(() => {
 
