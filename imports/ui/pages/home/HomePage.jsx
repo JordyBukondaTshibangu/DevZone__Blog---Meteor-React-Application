@@ -1,11 +1,13 @@
 import React from 'react';
 import {withTracker} from 'meteor/react-meteor-data';
+import styled from 'styled-components';
 import {PostsCollection} from "../../../db/posts/collection";
 import BlogCategories from '../../containers/blogCategories/';
 import MostViewed from '../../containers/mostViewed/MostViewed.jsx';
 import DevZoners from '../../containers/devZoners/DevZoners.jsx';
 import HomePost from '../../components/HomePost'
-import styled from 'styled-components';
+import DevProfile from '../../components/devProfile/DevProfile';
+
 
 
 const HomePage = ({posts}) => {
@@ -27,6 +29,7 @@ const HomePage = ({posts}) => {
                     }
                 </PostsContainer>
                 <Side>
+                    <DevProfile />
                     <MostViewed mostViewedPosts={mostViewedPosts} />
                     <DevZoners />
                 </Side>
@@ -56,7 +59,9 @@ const PostsContainer = styled.div`
     align-items : center;
 `;
 const Side = styled.div`
-    display : none
+    display : flex;
+    flex-direction : column;
+    align-items : center;
 `;
 
 export default withTracker(() => {

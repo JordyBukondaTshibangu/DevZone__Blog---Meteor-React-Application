@@ -51,6 +51,7 @@ const ImageContainer = styled.div`
     background: #000;
 `;
 const Image = styled.img`
+    display : block;
     width : 100%;
     height : 100%;
     object-fit: cover;
@@ -81,7 +82,7 @@ const TextContainer = styled.div`
    align-items : start;
    justify-content : start;
    gap : 20px;
-   margin-left : 30px;
+   margin-left : 5px;
    margin-right : 30px;
 `;
 
