@@ -15,7 +15,7 @@ import ProtectedRoute from '../imports/ui/ProtectedRoute';
 
 import LoginPage from '../imports/ui/pages/login/LoginPage.jsx';
 import SignUp from '../imports/ui/pages/signup/SignUp.jsx';
-import HomePage from '../imports/ui/pages/home/HomePage.jsx';
+import HomePage from '../imports/ui/pages/home';
 
 import SinglePost from '../imports/ui/pages/posts/SinglePost/SinglePostPage.jsx';
 import PostsPage from '../imports/ui/pages/posts/AllPost/AllPostsPage.jsx';

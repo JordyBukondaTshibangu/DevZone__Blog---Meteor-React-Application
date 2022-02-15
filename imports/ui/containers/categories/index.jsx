@@ -1,8 +1,8 @@
 import React from 'react';
 import { categories } from '../../utils/categories.js';
-import { Topics, Typography, TagContainer, Tag, TagLink } from './BlogCategoryElement.js';
+import { Topics, Typography, TagContainer, Tag, TagLink } from './CategoryElement.js';
 
-const BlogCategories = () => {
+const Categories = () => {
 
     return <Topics>
             <Typography>Topics</Typography>
@@ -19,4 +19,4 @@ const BlogCategories = () => {
     
 }
 
-export default BlogCategories
+export default Categories

@@ -1,23 +1,29 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { DevelopersCollection } from '../../../db/developers/collection';
-import DevCard from '../../components/devCard/DevCard.jsx'
 import LoadingSpinner from '../../feedback/LoadingSpinner';
-import './DevZoners.css';
+import styled from 'styled-components';
 
 
 const DevZoners = ({developers}) => {
 
     return (
-        <div className="blogers-list">
+        <DevContainer>
             {
                 developers.length === 0 ? <LoadingSpinner /> : 
-                developers.map((developer, index) => <DevCard key={index} developer={developer} />)
+                developers.map((developer, index) => (
+                       <>
+                         {/* <img src={developer.avatar} alt=""/> */}    
+                         <h5>{ developer.fullName }</h5>
+                       </>
+                ))
             } 
-        </div>
+        </DevContainer>
     )
 }
+export const DevContainer = styled.div`
 
+`;
 export default withTracker(() => {
 
     Meteor.subscribe('developers', 5);

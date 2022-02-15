@@ -2,17 +2,20 @@ import styled  from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Topics = styled.div`
-    margin : 50px;
-    margin-left : 10%;
-    margin-right : 10%;
     display : flex;
     align-items : center;
     justify-content : center;
     gap : 7.5px;
+    background : #FFF;
 `;
 
-export const Typography = styled.h4`
+export const Typography = styled.h3`
     font-size : 1.2rem;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    padding : revert;
+    padding-left : 15px;
 `
 
 export const TagContainer = styled.div`
@@ -39,14 +42,13 @@ export const Tag = styled.div`
 
     &:hover {
         color : #FFF;
-        transform : translateY(-5px);
-        background : #9da19e;
+        transform : scale(1.02);
     }
 `
 
 export const TagLink = styled(Link)`
     text-decoration : none;
-    color : #000;
     font-size : 0.8rem;
     font-weight : 800;
+    color: #6a6359;
 `

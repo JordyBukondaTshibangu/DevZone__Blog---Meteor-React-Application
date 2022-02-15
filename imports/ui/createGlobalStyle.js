@@ -21,6 +21,16 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto Slab', helvetica, sans-serif;
   }
 
+  h4 {
+    width : 100%;
+    color: #333333;
+    text-transform: uppercase;
+    font-family: 'Open Sans', serif;
+    font-size: 15px;
+    line-height: 1.52em;
+    font-weight: 400;
+  }
+
   p {
     margin-bottom: 30px;
     font-size: 1.2rem;
