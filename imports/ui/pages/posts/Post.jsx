@@ -1,13 +1,13 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { useHistory } from 'react-router-dom';
-import SinglePost from '../../../components/post/Post.jsx';
-import RelatedStory from '../../../containers/relatedStories/RelatedStories.jsx'
-import MostViewedPost from '../../../containers/mostViewed/MostViewed.jsx';
-import { PostsCollection } from "../../../../db/posts/collection";
+import SinglePost from '../../components/post/Post.jsx';
+import RelatedStory from '../../containers/relatedStories/RelatedStories.jsx'
+import MostViewedPost from '../../containers/mostViewed/MostViewed.jsx';
+import { PostsCollection } from "../../../db/posts/collection";
 
 
-const SinglePostPage = props => {
+const Post = props => {
  
     const { dev, posts } = props
     const _id = props.propsData.computedMatch.params.postId;
@@ -54,9 +54,6 @@ const SinglePostPage = props => {
 }
 
 export default withTracker(() => {
-
             Meteor.subscribe('posts');
-
             return { posts : PostsCollection.find({}).fetch()};
-
-})(SinglePostPage)
+})(Post)

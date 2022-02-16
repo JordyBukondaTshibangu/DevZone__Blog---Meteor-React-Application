@@ -4,7 +4,6 @@ import { withTracker } from 'meteor/react-meteor-data'
 import { DevelopersCollection  } from '../../../db/developers/collection';
 import LoadingSpinner from '../../feedback/LoadingSpinner';
 import DevProfile from '../../components/devProfile/DevProfile.jsx'
-import './DevelopersPage.css';
 
 const DevelopersPage = ({developers}) => {
 
@@ -13,7 +12,7 @@ const DevelopersPage = ({developers}) => {
     const closeProfileModal = () => { setShowProfile(false)}
 
     return (
-        <div className="dev-page-container">
+        <div>
             {
                 developers.length === 0 ? <LoadingSpinner /> : 
                 developers.map((devProfile,index) => {
@@ -21,15 +20,15 @@ const DevelopersPage = ({developers}) => {
                     const { fullName, avatar, email } = devProfile
 
                     return (
-                        <div key={index} className="dev-card">
+                        <div key={index}>
                             <img src={avatar} alt="/"/>
-                            <div className="dev-card-body">
+                            <div>
                                 <h4>{fullName}</h4>
                                 <h6>{email}</h6>
                                 <br></br>
                                 <hr></hr>
                             </div>
-                            <div className="dev-card-button">
+                            <div>
                                 <button onClick={() => setShowProfile(!showProfile)}>View Profile</button>
                                 <button>Follow</button>
                             </div>

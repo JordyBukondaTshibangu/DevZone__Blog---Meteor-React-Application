@@ -2,11 +2,11 @@ import React, {useState, useContext} from 'react';
 import ReactDOM from 'react-dom';
 import {Link, useHistory} from 'react-router-dom';
 import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css';
 import moment from 'moment';
 import Error from '../../feedback/Error';
 import Success from '../../feedback/Success';
 import { UserContext } from '../../context/UserContext';
+import 'react-calendar/dist/Calendar.css';
 
 const SignUp = () => {
 

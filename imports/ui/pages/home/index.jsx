@@ -34,10 +34,7 @@ const HomePage = ({posts}) => {
                     </Side>
                 </Container>
             </BlogContainer>
-           
         </PageContainer>
-
-
     )
 }
 
@@ -45,7 +42,7 @@ const HomePage = ({posts}) => {
 
 export default withTracker(() => {
 
-    Meteor.subscribe('posts', 3);
+    Meteor.subscribe('posts', 5);
 
     return {posts: PostsCollection.find({}).fetch()};
 
