@@ -26,7 +26,7 @@ import MyProfile from '../imports/ui/pages/profile/MyProfile/MyProfile.jsx';
 
 
 import DevelopersPage from '../imports/ui/pages/developers/DevelopersPage.jsx';
-import AboutPage from '../imports/ui/pages/about/AboutPage.jsx';
+import AboutPage from '../imports/ui/pages/about/index.jsx';
 
 
 
