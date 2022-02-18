@@ -15,8 +15,8 @@ import LoginPage from '../imports/ui/pages/login/LoginPage.jsx';
 import SignUp from '../imports/ui/pages/signup/SignUp.jsx';
 import HomePage from '../imports/ui/pages/home';
 
-import SinglePost from '../imports/ui/pages/posts/Post';
-import PostsPage from '../imports/ui/pages/posts/Posts';
+import SinglePost from '../imports/ui/pages/posts/post/';
+import PostsPage from '../imports/ui/pages/posts/posts/';
 import MyPosts from '../imports/ui/pages/user-post/myPosts/MyPostsPage.jsx';
 import UpdatePost from '../imports/ui/pages/user-post/UpdatePost/UpdatePost.jsx'
 import NewPostPage from '../imports/ui/pages/user-post/NewPost/NewPostPage.jsx';
@@ -50,7 +50,7 @@ const routes = (
         <Route path="/my-profile"  element={<MyProfile/>} />
         <Route path="/update-my-profile"  element={<UpdateProfil/>} />
         <Route path="/devs"  element={<DevelopersPage/>} />
-        <Route path="/about"  element={<AboutPage/>} />
+        <Route path="/about-us"  element={<AboutPage/>} />
        </Routes>
       <Footer />
     </UserContextProvider>

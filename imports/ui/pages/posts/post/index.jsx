@@ -1,9 +1,9 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import SinglePost from '../../components/post/Post.jsx';
-import RelatedStory from '../../containers/relatedStories/RelatedStories.jsx'
-import MostViewedPost from '../../containers/mostViewed/MostViewed.jsx';
-import { PostsCollection } from "../../../db/posts/collection";
+import SinglePost from '../post/';
+import RelatedStory from '../../../containers/relatedStories/RelatedStories.jsx'
+import MostViewedPost from '../../../containers/mostViewed/MostViewed.jsx';
+import { PostsCollection } from "../../../../db/posts/collection";
 
 
 const Post = props => {

@@ -12,7 +12,7 @@ export const PageContainer = styled.div`
     padding-right : 50px;
 `;
 export const Category = styled.div``;
-export const BlogContainer = styled.div`
+export const BlogContainer = styled.main`
     display : flex;
     justify-content : center;
     align-items : center;

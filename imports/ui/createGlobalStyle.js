@@ -10,6 +10,12 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Halant', helvetica, sans-serif;
   }
 
+  main {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   h3 {
     text-align: center;
     font-size: 42px;
