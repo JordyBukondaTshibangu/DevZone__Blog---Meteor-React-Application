@@ -1,16 +1,14 @@
 import React, {useState, useContext} from 'react';
 import ReactDOM from 'react-dom';
-import {Link, useHistory} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Calendar from 'react-calendar'
 import moment from 'moment';
-import Error from '../../feedback/Error';
-import Success from '../../feedback/Success';
+import Error from '../../components/feedback/Error';
+import Success from '../../components/feedback/Success';
 import { UserContext } from '../../context/UserContext';
 import 'react-calendar/dist/Calendar.css';
 
 const SignUp = () => {
-
-    let history = useHistory();
 
     const {handleRegister, errorFlag} = useContext(UserContext)
 
@@ -32,7 +30,7 @@ const SignUp = () => {
             setError(true);
             setMessage("Password don't match")
             setTimeout(() => {
-                history.push('/');
+                // history.push('/');
             }, 3000)
             return;
         }

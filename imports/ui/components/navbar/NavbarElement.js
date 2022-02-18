@@ -67,7 +67,7 @@ export const NavItem = styled.li`
         transform : scale(1.02);
     }
 `;
-export const NavLink = styled(LinkScroll)`
+export const NavLink = styled(Link)`
     cursor : pointer;
     text-decoration : none;
     color : #FFF;

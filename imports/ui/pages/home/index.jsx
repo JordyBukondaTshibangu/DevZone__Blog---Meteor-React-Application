@@ -1,9 +1,9 @@
 import React from 'react';
-import {withTracker} from 'meteor/react-meteor-data';
+import {withTracker} from 'meteor/react-meteor-data'; // TO CHANGE TO HOOK
 import {PostsCollection} from "../../../db/posts/collection";
 import BlogCategories from '../../containers/categories';
 import MostViewed from '../../containers/mostViewed/MostViewed.jsx';
-import HomePost from '../../components/homePost'
+import HomePost from '../../components/HomePost';
 import DevProfile from '../../components/devProfile/DevProfile';
 import { PageContainer, Category, Container, PostsContainer, Side, BlogContainer} from './HomePageElement'
 

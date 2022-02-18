@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { withTracker } from 'meteor/react-meteor-data'
-import { useHistory } from 'react-router-dom';
 import { PostsCollection } from "../../../../db/posts/collection";
 import MyPosts from '../../../containers/myPosts/MyPosts.jsx'
 import PostsSideBar from '../../../components/myPostsSideBar/PostsSideBar.jsx';
@@ -10,7 +9,7 @@ const PostsPage = ({dev, posts}) => {
     const myPosts = posts.filter(post => post.email == dev.email)
     const [ searchInput, setSearchInput ] = useState()
 
-    if(!devObj) useHistory().push('/');
+    // if(!devObj) useHistory().push('/');
 
     const handleSearch = search => {
         setSearchInput(search)

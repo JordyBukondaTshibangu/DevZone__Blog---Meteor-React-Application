@@ -1,11 +1,7 @@
-import React, { createContext, useReducer, useState } from 'react'
-import { useHistory } from 'react-router-dom'
-
+import React, { createContext, useState } from 'react'
 export const UserContext = createContext()
 
 const UserContextProvider = (props) => {
-
-	const history = useHistory()
 
 	const [ userState, setUserState ] = useState({})
 	const [ error, setError ] = useState(false)
@@ -28,7 +24,7 @@ const UserContextProvider = (props) => {
             } else {
                 localStorage.setItem('dev', JSON.stringify(newDev))
 				setUserState(newDev)
-                history.push('/home');
+                // history.push('/home'); 
             }
         })
     }
@@ -43,13 +39,13 @@ const UserContextProvider = (props) => {
 			if (res) {
 				setUserState(res)
 				localStorage.setItem('dev', JSON.stringify(res))
-				history.push('/home')
+				// history.push('/home')
 			}
 		})
 	}
 	const handleLogout = () => {
         localStorage.removeItem('dev');
-        history.push('/')
+        // history.push('/')
     }
 	return (
 		<UserContext.Provider value={{ userState, handleLogin, handleRegister, handleLogout, errorFlag : error }}>

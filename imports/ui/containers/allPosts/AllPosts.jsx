@@ -1,13 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import MostViewedPost from '../../components/mostViewedPost/MostViewedPost.jsx';
 
 
 const AllPosts = ({posts, search, category }) => {
-    let history = useHistory();
 
     const handleViewPost = (_id) => {
-        history.push(`/posts/${_id}`)
+        // history.push(`/posts/${_id}`)
     }
     
     return (

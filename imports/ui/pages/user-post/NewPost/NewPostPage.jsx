@@ -1,14 +1,12 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
-import {useHistory} from 'react-router-dom';
 import {CKEditor} from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import Success from '../../../feedback/Success';
-import Error from '../../../feedback/Error';
+import Success from '../../../components/feedback/Success';
+import Error from '../../../components/feedback/Error';
 
 const NewPostPage = props => {
 
-    let history = useHistory()
     const [title, setTitle] = useState("");
     const [category, setCategory] = useState("");
     const [tagline, setTagline] = useState("");
@@ -34,7 +32,7 @@ const NewPostPage = props => {
 
             setSuccess(true);
             setTimeout(() => {
-                history.push('/home');
+                // history.push('/home');
             }, 3000)
         })
     }

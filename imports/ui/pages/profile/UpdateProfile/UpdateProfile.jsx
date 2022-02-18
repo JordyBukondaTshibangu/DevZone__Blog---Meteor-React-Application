@@ -1,15 +1,12 @@
 import React, { useState } from 'react'
-import {  useHistory } from 'react-router';
 import ReactDOM from 'react-dom';
-import Success from '../../../feedback/Success';
-import Error from '../../../feedback/Error';
+import Success from '../../../components/feedback/Success';
+import Error from '../../../components/feedback/Error';
 
 const UpdateProfile = props => {
 
     const dev = props.dev;
     const { _id, fullName, dateOfBirth, email, myBio, avatar} = dev
-
-    let history = useHistory();
 
     const [ updatedFullName, setFullName ] = useState(fullName);
     const [ updatedDateOfBirth, setDateOfBirth ] = useState(dateOfBirth);
@@ -42,7 +39,7 @@ const UpdateProfile = props => {
             localStorage.setItem('dev', JSON.stringify(updatedDev))
             setSucces(true)
             setTimeout(() => {
-                history.push('/my-profile');
+                // history.push('/my-profile');
             }, 3000)
         })
     }

@@ -1,13 +1,11 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
 import { PostContainer, PostTitle, PostInfo, PostDetails, PostInfoTag, Container, Image, ImageContainer,TextContainer, ReadMore, FontAwesomeBook, FontAwesomeComment, FontAwesomeUser} from './HomePostElement'
 
 const HomePost = ({post}) => {
 
-    let history = useHistory();
 
     const handleViewPost = (_id) => {
-        history.push(`/posts/${_id}`)
+        // history.push(`/posts/${_id}`)
     }
   return (
     <PostContainer onClick={()=> handleViewPost(post._id)}>

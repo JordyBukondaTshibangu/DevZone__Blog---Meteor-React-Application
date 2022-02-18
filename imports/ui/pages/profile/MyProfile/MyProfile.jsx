@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
-import { Link, useHistory  } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaGithub, FaFacebook, FaTwitterSquare, FaInstagramSquare } from 'react-icons/fa';
 
 
 const MyProfile = props => {
 
     const dev = props.dev;
-    let history = useHistory();
 
-    if(!dev) useHistory().push('');
+    // if(!dev) useHistory().push('');
     
     const { fullName, dateOfBirth, myBio, avatar, email } = dev
     

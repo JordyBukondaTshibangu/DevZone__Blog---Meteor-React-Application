@@ -1,14 +1,11 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import MostViewedPost from '../../components/mostViewedPost/MostViewedPost.jsx';
 
 const MostViewed = ({mostViewedPosts}) => {
 
-    let history = useHistory();
-
     const handleViewPost = (_id) => {
-        history.push(`/posts/${_id}`)
+        // history.push(`/posts/${_id}`)
     }
     return (
         <ProfileContainer>

@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
 import ReactHtmlParser from 'react-html-parser';
-import {Link, useHistory } from 'react-router-dom';
+import {Link } from 'react-router-dom';
 
 
 const SinglePost = props => {
 
-    let history = useHistory();
     const [error, setError] = useState("");
     const [ showDescription, setShowDescription ] = useState(false);
 
@@ -30,7 +29,7 @@ const SinglePost = props => {
                 setError("There was an error");
                 return
             }
-            history.push('/my-posts')
+            // history.push('/my-posts')
         })
     }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 import { DevelopersCollection } from '../../../db/developers/collection';
-import LoadingSpinner from '../../feedback/LoadingSpinner';
+import LoadingSpinner from '../../components/feedback/LoadingSpinner';
 import styled from 'styled-components';
 
 

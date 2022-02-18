@@ -1,6 +1,5 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
-import { useHistory } from 'react-router-dom';
 import SinglePost from '../../components/post/Post.jsx';
 import RelatedStory from '../../containers/relatedStories/RelatedStories.jsx'
 import MostViewedPost from '../../containers/mostViewed/MostViewed.jsx';
@@ -14,7 +13,7 @@ const Post = props => {
 
     const devObj = dev
     if(!devObj){
-        useHistory().push('/');
+        // useHistory().push('/');
     } 
 
     const filteredPost = posts.filter(post => post._id === _id)

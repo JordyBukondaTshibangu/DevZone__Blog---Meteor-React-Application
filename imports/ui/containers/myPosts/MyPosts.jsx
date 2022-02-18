@@ -1,5 +1,5 @@
 import React from 'react';
-import LoadingSpinner from '../../feedback/LoadingSpinner';
+import LoadingSpinner from '../../components/feedback/LoadingSpinner';
 import Posts from '../../components/myPosts/Posts.jsx';
 import './MyPosts.css';
 

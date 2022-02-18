@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import {CKEditor} from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import Success from '../../../feedback/Success';
-import Error from '../../../feedback/Error';
+import Success from '../../../components/feedback/Success';
+import Error from '../../../components/feedback/Error';
 
 const UpdatePost = props => {
     
-    let history = useHistory();
-
     const post = props.propsData.location.state;
     const { _id, title, tagline, description, image,  content, category } = post
 
@@ -41,7 +38,7 @@ const UpdatePost = props => {
 
             setSuccess(true);
             setTimeout(()=> {
-                history.push('/home');
+                // history.push('/home');
             },3000)
         })
         
