@@ -19,7 +19,7 @@ import SinglePost from '../imports/ui/pages/posts/post/';
 import PostsPage from '../imports/ui/pages/posts/posts/';
 import MyPosts from '../imports/ui/pages/user-post/myPosts/MyPostsPage.jsx';
 import UpdatePost from '../imports/ui/pages/user-post/UpdatePost/UpdatePost.jsx'
-import NewPostPage from '../imports/ui/pages/user-post/NewPost/NewPostPage.jsx';
+import NewPostPage from '../imports/ui/pages/user-post/NewPost/index.jsx';
 
 import UpdateProfil from '../imports/ui/pages/profile/UpdateProfile/UpdateProfile';
 import MyProfile from '../imports/ui/pages/profile/MyProfile/MyProfile.jsx';

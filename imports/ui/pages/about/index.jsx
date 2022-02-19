@@ -1,6 +1,6 @@
 import React from 'react';
 import InfoSection from '../../components/infoSection';
-// import VideoMedia from '../../components/assets/videos/video.mp4'
+// import VideoMedia from '../../../../public/assets/videos/video.mp4'
 import {Container, HeroContainer, HeroBg,Video, HeroContent, Title, Typography, SubContainer, SubTitle, TeamMember, MemberImg } from './AboutElement'
 import { homeInfoOne, homeInfoThree, homeInfoTwo } from './data';
 
