@@ -1,17 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
-import {
-    FaHome,
-    FaPlusSquare,
-    FaUsers,
-    FaBook,
-    FaChild,
-    FaGithub,
-    FaFacebook,
-    FaTwitterSquare,
-    FaInstagramSquare
-} from 'react-icons/fa';
-import './Footer.css';
+import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FooterContainer, FooterLink, FooterLinkItems, FooterLinkTitle, FooterLinksContainer, FooterLinksWrapper,FooterWrap, SocialMedia, SocialIconLink, SocialIcons, SocialLogo, SocialMediaWrap, WebsiteRights} from './FooterElement'
+
 
 const Footer = () => {
 
@@ -26,47 +16,68 @@ const Footer = () => {
     })
 
     return (
-        <> {
-            // email === "" ? null : <footer>
-            //     <div className="menu-list">
-            //         <ul>
-            //             <li>
-            //                 <Link className="list-item-group" to="/"><FaHome/><span>Home</span>
-            //                 </Link>
-            //             </li>
-            //             <li>
-            //                 <Link className="list-item-group" to="/new-post"><FaPlusSquare/><span>New Post</span>
-            //                 </Link>
-            //             </li>
-            //             <li>
-            //                 <Link className="list-item-group" to="/devs"><FaUsers/><span>DevsZoners</span>
-            //                 </Link>
-            //             </li>
-            //             <li>
-            //                 <Link className="list-item-group" to="/posts"><FaBook/><span>Posts</span>
-            //                 </Link>
-            //             </li>
-            //             <li>
-            //                 <Link className="list-item-group" to="/about"><FaChild/><span>About</span>
-            //                 </Link>
-            //             </li>
-            //         </ul>
-            //         <ul>
-            //             <li><FaFacebook/></li>
-            //             <li><FaTwitterSquare/></li>
-            //             <li><FaInstagramSquare/></li>
-            //             <li><FaGithub/></li>
-            //         </ul>
-            //     </div>
-            //     <div>
-            //         <p>
-            //             DEV Community – A constructive and inclusive social network for software developers. With you every step of your journey.
-            //                                                     Built on Forem — the open source software that powers . DEV Community © 2016 - 2021.
-            //         </p>
-
-            //     </div>
-            // </footer>
-        } </>
+        <FooterContainer id={'contactus'}>
+          <FooterWrap>
+              <FooterLinksContainer>
+                  <FooterLinksWrapper>
+                      <FooterLinkItems>
+                            <FooterLinkTitle>About Us </FooterLinkTitle>
+                              <FooterLink to='/sign-in'>How it works</FooterLink>
+                              <FooterLink to='/sign-in'>Testimonials</FooterLink>
+                              <FooterLink to='/sign-in'>Careers</FooterLink>
+                              <FooterLink to='/sign-in'>Investors</FooterLink>
+                              <FooterLink to='/sign-in'>Terms of Services</FooterLink>
+                      </FooterLinkItems>
+                      <FooterLinkItems>
+                            <FooterLinkTitle>Videos </FooterLinkTitle>
+                              <FooterLink to='/sign-in'>Submit Video</FooterLink>
+                              <FooterLink to='/sign-in'>Ambassadors</FooterLink>
+                              <FooterLink to='/sign-in'>Agency</FooterLink>
+                              <FooterLink to='/sign-in'>Influencer</FooterLink>
+                              </FooterLinkItems>
+                      <FooterLinkItems>
+                            <FooterLinkTitle>Contact Us </FooterLinkTitle>
+                              <FooterLink to='/sign-in'>Contact</FooterLink>
+                              <FooterLink to='/sign-in'>Support</FooterLink>
+                              <FooterLink to='/sign-in'>Destinations</FooterLink>
+                              <FooterLink to='/sign-in'>Sponsorships</FooterLink>
+                              <FooterLink to='/sign-in'>Terms of Services</FooterLink>
+                      </FooterLinkItems>
+                      <FooterLinkItems>
+                            <FooterLinkTitle>Social Media </FooterLinkTitle>
+                              <FooterLink to='/sign-in'>Instagram</FooterLink>
+                              <FooterLink to='/sign-in'>Facebook</FooterLink>
+                              <FooterLink to='/sign-in'>Youtube</FooterLink>
+                              <FooterLink to='/sign-in'>Twitter</FooterLink>
+                              <FooterLink to='/sign-in'>Pinterest</FooterLink>
+                      </FooterLinkItems>
+                  </FooterLinksWrapper>
+              </FooterLinksContainer>
+              <SocialMedia>
+                  <SocialMediaWrap>
+                      <SocialLogo to='/'>TshibsFy</SocialLogo>
+                        <WebsiteRights> © {new Date().getFullYear()} All rights reseverd.</WebsiteRights>
+                        <SocialIcons>
+                            <SocialIconLink href='//facebook.com' target='_blank' aria-label='facebook'>
+                                <FaFacebook />
+                            </SocialIconLink>
+                            <SocialIconLink href='//twitter.com' target='_blank' aria-label='twitter'>
+                                <FaTwitter />
+                            </SocialIconLink>
+                            <SocialIconLink href='//youtube.com' target='_blank' aria-label='youtube'>
+                                <FaYoutube />
+                            </SocialIconLink>
+                            <SocialIconLink href='//instagram.com' target='_blank' aria-label='instagram'>
+                                <FaInstagram />
+                            </SocialIconLink>
+                            <SocialIconLink href='//linkedin.com' target='_blank' aria-label='linkedin'>
+                                <FaLinkedinIn />
+                            </SocialIconLink>
+                        </SocialIcons>
+                  </SocialMediaWrap>
+              </SocialMedia>
+          </FooterWrap>
+      </FooterContainer>
     )
 }
 

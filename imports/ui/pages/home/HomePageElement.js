@@ -11,7 +11,9 @@ export const PageContainer = styled.div`
     padding-left : 50px;
     padding-right : 50px;
 `;
-export const Category = styled.div``;
+export const Category = styled.div`
+    margin-top : 100px;
+`;
 export const BlogContainer = styled.main`
     display : flex;
     justify-content : center;

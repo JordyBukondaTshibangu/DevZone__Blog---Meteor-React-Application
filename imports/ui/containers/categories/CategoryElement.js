@@ -2,6 +2,7 @@ import styled  from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Topics = styled.div`
+    padding : 20px 0;
     display : flex;
     align-items : center;
     justify-content : center;

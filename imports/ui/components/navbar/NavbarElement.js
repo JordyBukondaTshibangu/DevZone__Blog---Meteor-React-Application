@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 import { FaBars} from 'react-icons/fa';
 
-export const NavContainer = styled.nav`
-    position : sticky;
+export const Nav  = styled.nav`
+    color : #FFF;
+    heght : 80px;
+    display : flex;
+    justify-content : center;
+    font-size : 1rem;
+    position : fixed;
+    width : 100%;
     top : 0;
-    left : 0;
+    z-index : 10;
+`;
+
+export const NavContainer = styled.nav`
     background-color : #000;
     color : #FFF;
     height : 80px;
@@ -14,6 +23,8 @@ export const NavContainer = styled.nav`
     display : flex;
     justify-content : space-between;
     align-items : center;
+    z-index : 1;
+    padding : 0 24px;
 `;
 export const NavLogo = styled(Link)`
     margin-left : 20px;
